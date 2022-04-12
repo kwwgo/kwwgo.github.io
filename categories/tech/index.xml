@@ -1,4 +1,53 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IT技术 on kwwgoo's Blog</title><link>https://example.com/categories/tech/</link><description>Recent content in IT技术 on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 Apr 2022 21:01:07 +0800</lastBuildDate><atom:link href="https://example.com/categories/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World,My Blog</title><link>https://example.com/p/hello-worldmy-blog/</link><pubDate>Sun, 10 Apr 2022 21:01:07 +0800</pubDate><guid>https://example.com/p/hello-worldmy-blog/</guid><description>&lt;img src="https://example.com/p/hello-worldmy-blog/hexohugo.webp" alt="Featured image of post Hello World,My Blog" />&lt;p>我想要构建自己的个人博客主要是受我朋友影响的，当时看到他的博客后，我很羡慕，感觉很有意思，有这么一个地方记录自己的生活或学到的技术是一件非常酷的事情。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IT技术 on kwwgoo's Blog</title><link>https://example.com/categories/tech/</link><description>Recent content in IT技术 on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 12 Apr 2022 13:33:49 +0800</lastBuildDate><atom:link href="https://example.com/categories/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Deploy</title><link>https://example.com/p/hugo-deploy/</link><pubDate>Tue, 12 Apr 2022 13:33:49 +0800</pubDate><guid>https://example.com/p/hugo-deploy/</guid><description>&lt;img src="https://example.com/p/hugo-deploy/featured-image-preview.jpg" alt="Featured image of post Hugo Deploy" />&lt;h2 id="安装hugo">安装Hugo&lt;/h2>
+&lt;p>按照&lt;a class="link" href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener"
+>官方的快速开始&lt;/a>即可&lt;/p>
+&lt;p>也可以利用choco包管理器来进行安装&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">choco install hugo-extended -confirm
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接着就可以建立自己的网站了&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">hugo new site myblog
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="添加主题">添加主题&lt;/h2>
+&lt;p>可以在 GitHub 仓库的 &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack/releases" target="_blank" rel="noopener"
+>Release&lt;/a>页面找到最新的稳定版。 下载后把 hugo-theme-stack-master 改名为 hugo-theme-stack 并放到站点目录的 themes 文件夹下。&lt;/p>
+&lt;p>如果你在使用 Git 管理来 Hugo 站点的源文件，可以把主题添加为 Submodule。&lt;/p>
+&lt;p>需要先把Hugo站点文件初始化&lt;code>git init&lt;/code>&lt;/p>
+&lt;p>然后使用命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>但是这样把主题文件添加为子模块后没有文件，还需要两条命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">git submodule init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git submodule update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样主题文件就出现了，当写下第一篇文章，并在本地检查没有错误后就可以部署到GithubPage了。&lt;/p>
+&lt;h2 id="自动化部署">自动化部署&lt;/h2>
+&lt;p>具体可以参考这篇文章,&lt;a class="link" href="https://yurepo.tw/2021/03/%E5%A6%82%E4%BD%95%E5%B0%87hugo%E9%83%A8%E8%90%BD%E6%A0%BC%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A/" target="_blank" rel="noopener"
+>如何將Hugo部落格部署到Github上?&lt;/a>&lt;/p></description></item><item><title>Hello World,My Blog</title><link>https://example.com/p/hello-worldmy-blog/</link><pubDate>Sun, 10 Apr 2022 21:01:07 +0800</pubDate><guid>https://example.com/p/hello-worldmy-blog/</guid><description>&lt;img src="https://example.com/p/hello-worldmy-blog/hexohugo.webp" alt="Featured image of post Hello World,My Blog" />&lt;p>我想要搭建自己的个人博客主要是受我朋友影响的，当时看到他的博客后，我很羡慕，感觉很有意思，有这么一个地方记录自己的生活或学到的技术是一件非常酷的事情。&lt;/p>
 &lt;p>我第一个博客是用&lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
 >Hugo&lt;/a>+&lt;a class="link" href="https://hugoloveit.com/zh-cn/theme-documentation-basics/" target="_blank" rel="noopener"
 >Loveit&lt;/a>主题搭建的。由于我是小白，也并非计算机专业的，就折腾了很久，但是这个主题的作者好像已经不在维护更新了，我就弃用了。&lt;/p>
@@ -6,7 +55,7 @@
 >Hexo&lt;/a>+&lt;a class="link" href="https://butterfly.js.org/posts/21cfbf15/" target="_blank" rel="noopener"
 >butterfly&lt;/a>主题搭建的，这个博客我投入了很多精力折腾界面，学习了很多，但是由于考研，最终也没写几篇文章，很久不碰后都忘记了怎么改的了，升级也很困难，我就放弃了。&lt;/p>
 &lt;p>经过以上折腾，我对Hugo和Hexo也算了解。它们都有各自的缺点和优点。&lt;/p>
-&lt;p>Hugo主打速度、简洁、高效，功能少，而且利用hugo搭建的博客在不修改主题文件下很容易修改主题，以达到自己想要的效果，但是功能较少，好的主题国内并不算多。&lt;/p>
+&lt;p>Hugo主打速度、简洁、高效，而且利用hugo搭建的博客在不修改主题文件下很容易修改主题，以达到自己想要的效果，但是功能较少，好的主题国内并不算多。&lt;/p>
 &lt;p>Hexo功能非常齐全，出现的早，优美的主题令人眼花缭乱，但是一般情况修改需要修改主题源码，不像Hugo那样直接在根目录中覆盖样式。一旦修改后，升级主题非常麻烦，而且非常臃肿。&lt;/p>
 &lt;p>经过对比后，我要又回到Hugo，并且选用了这个主题。如今考研结束，我也有时间和精力来重新维护我的博客。&lt;/p>
 &lt;p>不论是学到的新知识，亦或是温故而知新，或者是生活中的感悟，我都会在这个地方分享。&lt;/p></description></item></channel></rss>
