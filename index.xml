@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kwwgoo's Blog</title><link>https://example.com/</link><description>Recent content on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml"/><item><title>bber</title><link>https://example.com/bber/</link><pubDate>Tue, 12 Apr 2022 19:04:42 +0800</pubDate><guid>https://example.com/bber/</guid><description>&lt;!-- raw HTML omitted --></description></item><item><title>魔改stack主题</title><link>https://example.com/p/%E9%AD%94%E6%94%B9stack%E4%B8%BB%E9%A2%98/</link><pubDate>Tue, 12 Apr 2022 17:34:53 +0800</pubDate><guid>https://example.com/p/%E9%AD%94%E6%94%B9stack%E4%B8%BB%E9%A2%98/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kwwgoo's Blog</title><link>https://example.com/</link><description>Recent content on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Bber</title><link>https://example.com/bber/</link><pubDate>Tue, 12 Apr 2022 19:04:42 +0800</pubDate><guid>https://example.com/bber/</guid><description>&lt;div id='speak'>&lt;/speak>
+&lt;!-- 使用markdown渲染 -->
+&lt;!-- &lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber-md.min.js" charset="utf-8" >&lt;/script> -->
+&lt;!-- 不使用markdown渲染 -->
+&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8" >&lt;/script>
+&lt;!-- 解析微信表情（参考：https://github.com/buddys/qq-wechat-emotion-parser） -->
+&lt;!-- &lt;script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js">&lt;/script> -->
+&lt;script>
+ispeakBber
+.init({
+el: '#speak', // 容器选择器
+name: 'kwwgoo🦄', // 显示的昵称
+envId: 'twikoo-3gos5ikbf8bca455', // 环境id
+region: 'ap-shanghai', // 腾讯云地址，默认为上海
+limit: 10, // 每次加载的条数，默认为5
+avatar: 'https://cdn.jsdelivr.net/gh/kwwgoo/cdn/custom/img.jpg',
+fromColor:'rgb(245, 150, 170)', // 下方标签背景颜色 默认 rgb(245, 150, 170)
+loadingImg: 'https://7.dusays.com/2021/03/04/d2d5e983e2961.gif', // 自定义loading的图片，示例值为默认值
+dbName:'talks' // 数据的名称，默认talks，避免有人的命名不是这个，所以加入此配置字段。
+})
+.then(function() {
+// 哔哔加载完成后的回调函数，你可以写你自己的功能
+console.log('哔哔 加载完成')
+})
+&lt;/script></description></item><item><title>魔改stack主题</title><link>https://example.com/p/%E9%AD%94%E6%94%B9stack%E4%B8%BB%E9%A2%98/</link><pubDate>Tue, 12 Apr 2022 17:34:53 +0800</pubDate><guid>https://example.com/p/%E9%AD%94%E6%94%B9stack%E4%B8%BB%E9%A2%98/</guid><description>&lt;blockquote>
 &lt;p>主要参考
 &lt;a class="link" href="https://mantyke.icu/2022/stack-theme-mod/" target="_blank" rel="noopener"
 >小球飞鱼&lt;/a>&lt;/p>
@@ -53,7 +77,10 @@
 &lt;h2 id="自动化部署">自动化部署&lt;/h2>
 &lt;p>具体可以参考这篇文章,&lt;a class="link" href="https://yurepo.tw/2021/03/%E5%A6%82%E4%BD%95%E5%B0%87hugo%E9%83%A8%E8%90%BD%E6%A0%BC%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A/" target="_blank" rel="noopener"
 >如何將Hugo部落格部署到Github上?&lt;/a>&lt;/p></description></item><item><title>建站日志</title><link>https://example.com/log/</link><pubDate>Tue, 12 Apr 2022 11:36:40 +0800</pubDate><guid>https://example.com/log/</guid><description>&lt;h2 id="2022412">2022/4/12&lt;/h2>
-&lt;p>正式搭建个人博客，采用Hugo+Stack+GihubPage,采用GihubAction自动化部署博客&lt;/p></description></item><item><title>Hello World,My Blog</title><link>https://example.com/p/hello-worldmy-blog/</link><pubDate>Sun, 10 Apr 2022 21:01:07 +0800</pubDate><guid>https://example.com/p/hello-worldmy-blog/</guid><description>&lt;img src="https://example.com/p/hello-worldmy-blog/hexohugo.webp" alt="Featured image of post Hello World,My Blog" />&lt;p>我想要搭建自己的个人博客主要是受我朋友影响的，当时看到他的博客后，我很羡慕，感觉很有意思，有这么一个地方记录自己的生活或学到的技术是一件非常酷的事情。&lt;/p>
+&lt;p>正式搭建个人博客，采用Hugo+Stack+GihubPage,采用GihubAction自动化部署博客
+增加&lt;a class="link" href="https://zl-maker.github.io/p/hugo-suosuo/" target="_blank" rel="noopener"
+>Bber界面&lt;/a>，采用&lt;a class="link" href="https://twikoo.js.org/" target="_blank" rel="noopener"
+>twikoo评论&lt;/a>&lt;/p></description></item><item><title>Hello World,My Blog</title><link>https://example.com/p/hello-worldmy-blog/</link><pubDate>Sun, 10 Apr 2022 21:01:07 +0800</pubDate><guid>https://example.com/p/hello-worldmy-blog/</guid><description>&lt;img src="https://example.com/p/hello-worldmy-blog/hexohugo.webp" alt="Featured image of post Hello World,My Blog" />&lt;p>我想要搭建自己的个人博客主要是受我朋友影响的，当时看到他的博客后，我很羡慕，感觉很有意思，有这么一个地方记录自己的生活或学到的技术是一件非常酷的事情。&lt;/p>
 &lt;p>我第一个博客是用&lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
 >Hugo&lt;/a>+&lt;a class="link" href="https://hugoloveit.com/zh-cn/theme-documentation-basics/" target="_blank" rel="noopener"
 >Loveit&lt;/a>主题搭建的。由于我是小白，也并非计算机专业的，就折腾了很久，但是这个主题的作者好像已经不在维护更新了，我就弃用了。&lt;/p>
