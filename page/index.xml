@@ -22,7 +22,10 @@ dbName:'talks' // 数据的名称，默认talks，避免有人的命名不是这
 // 哔哔加载完成后的回调函数，你可以写你自己的功能
 console.log('哔哔 加载完成')
 })
-&lt;/script></description></item><item><title>建站日志</title><link>https://example.com/log/</link><pubDate>Tue, 12 Apr 2022 11:36:40 +0800</pubDate><guid>https://example.com/log/</guid><description>&lt;h2 id="2022412">2022/4/12&lt;/h2>
+&lt;/script></description></item><item><title>建站日志</title><link>https://example.com/log/</link><pubDate>Tue, 12 Apr 2022 11:36:40 +0800</pubDate><guid>https://example.com/log/</guid><description>&lt;h2 id="2022413">2022/4/13&lt;/h2>
+&lt;p>正式添加站点图标，&lt;a class="link" href="https://realfavicongenerator.net/" target="_blank" rel="noopener"
+>站点图标来源&lt;/a>&lt;/p>
+&lt;h2 id="2022412">2022/4/12&lt;/h2>
 &lt;p>正式搭建个人博客，采用Hugo+Stack+GihubPage,采用GihubAction自动化部署博客
 增加&lt;a class="link" href="https://zl-maker.github.io/p/hugo-suosuo/" target="_blank" rel="noopener"
 >Bber界面&lt;/a>，采用&lt;a class="link" href="https://twikoo.js.org/" target="_blank" rel="noopener"
