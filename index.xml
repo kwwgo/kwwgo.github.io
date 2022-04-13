@@ -79,6 +79,8 @@ console.log('哔哔 加载完成')
 >如何將Hugo部落格部署到Github上?&lt;/a>&lt;/p></description></item><item><title>建站日志</title><link>https://example.com/log/</link><pubDate>Tue, 12 Apr 2022 11:36:40 +0800</pubDate><guid>https://example.com/log/</guid><description>&lt;h2 id="2022413">2022/4/13&lt;/h2>
 &lt;p>正式添加站点图标，&lt;a class="link" href="https://realfavicongenerator.net/" target="_blank" rel="noopener"
 >站点图标来源&lt;/a>&lt;/p>
+&lt;p>修改CSS样式，具体参考这篇&lt;a class="link" href="https://blog.echosec.top/p/custom-hugo-theme-styles/" target="_blank" rel="noopener"
+>文章&lt;/a>&lt;/p>
 &lt;h2 id="2022412">2022/4/12&lt;/h2>
 &lt;p>正式搭建个人博客，采用Hugo+Stack+GihubPage,采用GihubAction自动化部署博客
 增加&lt;a class="link" href="https://zl-maker.github.io/p/hugo-suosuo/" target="_blank" rel="noopener"
@@ -94,7 +96,7 @@ console.log('哔哔 加载完成')
 &lt;p>Hugo主打速度、简洁、高效，而且利用hugo搭建的博客在不修改主题文件下很容易修改主题，以达到自己想要的效果，但是功能较少，好的主题国内并不算多。&lt;/p>
 &lt;p>Hexo功能非常齐全，出现的早，优美的主题令人眼花缭乱，但是一般情况修改需要修改主题源码，不像Hugo那样直接在根目录中覆盖样式。一旦修改后，升级主题非常麻烦，而且非常臃肿。&lt;/p>
 &lt;p>经过对比后，我要又回到Hugo，并且选用了这个主题。如今考研结束，我也有时间和精力来重新维护我的博客。&lt;/p>
-&lt;p>不论是学到的新知识，亦或是温故而知新，或者是生活中的感悟，我都会在这个地方分享。&lt;/p></description></item><item><title>Friends</title><link>https://example.com/friends/</link><pubDate>Sun, 10 Apr 2022 20:52:18 +0800</pubDate><guid>https://example.com/friends/</guid><description>&lt;h1 id="朋友圈">朋友圈&lt;/h1></description></item><item><title>Archives</title><link>https://example.com/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://example.com/archives/</guid><description/></item><item><title>Links</title><link>https://example.com/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.com/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
+&lt;p>不论是学到的新知识，亦或是温故而知新，或者是生活中的感悟，我都会在这个地方分享。&lt;/p></description></item><item><title>Friends</title><link>https://example.com/friends/</link><pubDate>Sun, 10 Apr 2022 20:52:18 +0800</pubDate><guid>https://example.com/friends/</guid><description>&lt;h2 id="朋友圈">朋友圈&lt;/h2></description></item><item><title>Archives</title><link>https://example.com/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://example.com/archives/</guid><description/></item><item><title>Links</title><link>https://example.com/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.com/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
 &lt;p>This page&amp;rsquo;s frontmatter:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
