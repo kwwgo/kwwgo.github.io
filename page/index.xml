@@ -31,7 +31,131 @@ console.log('哔哔 加载完成')
 &lt;p>正式搭建个人博客，采用Hugo+Stack+GihubPage,采用GihubAction自动化部署博客
 增加&lt;a class="link" href="https://zl-maker.github.io/p/hugo-suosuo/" target="_blank" rel="noopener"
 >Bber界面&lt;/a>，采用&lt;a class="link" href="https://twikoo.js.org/" target="_blank" rel="noopener"
->twikoo评论&lt;/a>&lt;/p></description></item><item><title>Friends</title><link>https://example.com/friends/</link><pubDate>Sun, 10 Apr 2022 20:52:18 +0800</pubDate><guid>https://example.com/friends/</guid><description>&lt;h2 id="朋友圈">朋友圈&lt;/h2></description></item><item><title>Archives</title><link>https://example.com/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://example.com/archives/</guid><description/></item><item><title>Links</title><link>https://example.com/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.com/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
+>twikoo评论&lt;/a>&lt;/p></description></item><item><title>Friends</title><link>https://example.com/friends/</link><pubDate>Sun, 10 Apr 2022 20:52:18 +0800</pubDate><guid>https://example.com/friends/</guid><description>&lt;h2 id="朋友圈">朋友圈&lt;/h2>
+&lt;h2 id="主题相关">主题相关&lt;/h2>
+&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;a target="_blank" href=https://lewky.cn/ title=雨临Lewis的博客---不想当写手的码农不是好咸鱼_(xз」∠)_ class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/avatar.jpg onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">雨临Lewis的博客&lt;/div>
+&lt;div class="friend info">"不想当写手的码农不是好咸鱼_(xз」∠)_"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;h2 id="软件工程师">软件工程师&lt;/h2>
+&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;a target="_blank" href=https://heaciy.com/ title=Heaciy---Life&amp;#32;is&amp;#32;what&amp;#32;happens&amp;#32;to&amp;#32;you&amp;#32;while&amp;#32;you&amp;#39;re&amp;#32;busy&amp;#32;making&amp;#32;other&amp;#32;plans. class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://heaciy.com/img/avatar_hu5506042264f2f143136192cbc8fadc99_165574_300x0_resize_box_2.png onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">Heaciy&lt;/div>
+&lt;div class="friend info">"Life is what happens to you while you&amp;#39;re busy making other plans."&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;h2 id="前端">前端&lt;/h2>
+&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;a target="_blank" href=https://nekodeng.gitee.io title=itsNekoDeng---十万伏特皮卡丘，梦想是世界和平，想要发光发热 class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://nekodeng.gitee.io/medias/avatar.jpg onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">itsNekoDeng&lt;/div>
+&lt;div class="friend info">"十万伏特皮卡丘，梦想是世界和平，想要发光发热"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;a target="_blank" href=https://www.antmoe.com/ title=小康博客---一个收藏回忆与分享技术的地方！ class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/avatar.jpg onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">小康博客&lt;/div>
+&lt;div class="friend info">"一个收藏回忆与分享技术的地方！"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;h2 id="大佬">大佬&lt;/h2>
+&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;a target="_blank" href=https://io-oi.me/ title=reuixiy---暗夜中,渴望一束光的关怀,在白天,却更渴望黑洞的吞噬,因为好奇心,想看看黑暗中有什么 class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://cdn.jsdelivr.net/gh/guanqr/blog/static/icons/android-chrome-512x512.png onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">reuixiy&lt;/div>
+&lt;div class="friend info">"暗夜中,渴望一束光的关怀,在白天,却更渴望黑洞的吞噬,因为好奇心,想看看黑暗中有什么"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;a target="_blank" href=https://guanqr.com/ title=荷戟独彷徨---爱光学，爱生活，爱创造 class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://cdn.jsdelivr.net/gh/guanqr/blog/static/icons/android-chrome-512x512.png onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">荷戟独彷徨&lt;/div>
+&lt;div class="friend info">"爱光学，爱生活，爱创造"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;a target="_blank" href=https://www.zyoushuo.cn/ title=阳光派Plus---聪明的妖怪已经录下了唐僧的紧箍咒 class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://cdn.jsdelivr.net/gh/zyoushuo/Blog/images/photo.jpg onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">阳光派Plus&lt;/div>
+&lt;div class="friend info">"聪明的妖怪已经录下了唐僧的紧箍咒"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;a target="_blank" href=https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/ title=TRHX&amp;#39;S&amp;#32;BLOG---没有礁石，就没有美丽的浪花；没有挫折，就没有壮丽的人生。 class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/images/trhx.png onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">TRHX&amp;#39;S BLOG&lt;/div>
+&lt;div class="friend info">"没有礁石，就没有美丽的浪花；没有挫折，就没有壮丽的人生。"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;a target="_blank" href=https://bbing.com.cn/ title=BBing---自由&amp;#32;分享&amp;#32;合作 class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://s3.ax1x.com/2021/01/21/s4crsU.png onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">BBing&lt;/div>
+&lt;div class="friend info">"自由 分享 合作"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;a target="_blank" href=https://maogeblog.top title=猫猫的小窝---万丈高楼平地起，辉煌只能靠自己 class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://cdn.jsdelivr.net/gh/HUC-GMM/maogeblog/ico.png onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">猫猫的小窝&lt;/div>
+&lt;div class="friend info">"万丈高楼平地起，辉煌只能靠自己"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a></description></item><item><title>Archives</title><link>https://example.com/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://example.com/archives/</guid><description/></item><item><title>Links</title><link>https://example.com/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.com/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
 &lt;p>This page&amp;rsquo;s frontmatter:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
