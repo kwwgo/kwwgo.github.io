@@ -237,7 +237,11 @@
 &lt;a class="link" href="https://xrg.fj.cn/p/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%973/" target="_blank" rel="noopener"
 >XR_G&amp;rsquo;s Blog&lt;/a>
 &lt;a class="link" href="https://lewky.cn/posts/hugo-3.html/" target="_blank" rel="noopener"
->雨临Lewis&lt;/a>&lt;/p>
+>雨临Lewis&lt;/a>
+&lt;a class="link" href="https://blog.zhixuan.dev/posts/ac760353/" target="_blank" rel="noopener"
+>zhixuan&amp;rsquo;s Blog&lt;/a>
+&lt;a class="link" href="https://blog.linsnow.cn/" target="_blank" rel="noopener"
+>L1nSn0w&amp;rsquo;s Blog&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="样式修改">样式修改&lt;/h2>
 &lt;p>所有自定样式CSS代码都在&lt;code>\assets\scss\custom.scss&lt;/code>中，修改的地方都已经注释&lt;/p>
