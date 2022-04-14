@@ -1,0 +1,655 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="学习mysql过程中的一些记录"><title>LearnMysql</title><link rel=canonical href=https://example.com/p/learnmysql/><link rel=stylesheet href=/scss/style.min.356ebad1450cf0f59b5a58b65312b6a3c3f5d69e1ab40efe83dc09d9a411f722.css><meta property="og:title" content="LearnMysql"><meta property="og:description" content="学习mysql过程中的一些记录"><meta property="og:url" content="https://example.com/p/learnmysql/"><meta property="og:site_name" content="kwwgoo's Blog"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="mysql"><meta property="article:published_time" content="2022-04-14T13:04:58+08:00"><meta property="article:modified_time" content="2022-04-14T05:10:24+00:00"><meta name=twitter:title content="LearnMysql"><meta name=twitter:description content="学习mysql过程中的一些记录"><link rel="shortcut icon" href=/img/favicon/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu95f9aa9b3889a33bdd5417ce5069a9f1_68014_300x0_resize_q75_box.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>kwwgoo's Blog</a></h1><h2 class=site-description>道路是曲折的,前途是光明的</h2></div></header><ol class=social-menu><li><a href=https://github.com/kwwgoo target=_blank title=GitHub><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://twitter.com target=_blank title=Twitter><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>Home</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><li><a href=/bber/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M9.828 9.172a4 4 0 100 5.656A10 10 0 0012 12a10 10 0 012.172-2.828 4 4 0 110 5.656A10 10 0 0112 12 10 10 0 009.828 9.172"/></svg><span>Bber</span></a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><li><a href=/friends/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg><span>Friends</span></a></li><li><a href=/links/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg><span>Links</span></a></li><li><a href=/log/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span>建站日志</span></a></li><div class=menu-bottom-section><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>暗色模式</span></li></div></ol></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/tech/ style=background-color:#2a9d8f;color:#fff>IT技术</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/learnmysql/>LearnMysql</a></h2><h3 class=article-subtitle>学习mysql过程中的一些记录</h3></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Apr 14, 2022</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 12 分钟</time></div></footer></div></header><section class=article-content><h2 id=mysql安装>MySQL安装</h2><p><a class=link href=https://www.runoob.com/mysql/mysql-tutorial.html target=_blank rel=noopener>菜鸟教程</a></p><p><a class=link href=https://dev.mysql.com/downloads/installer/ target=_blank rel=noopener>下载地址</a></p><h2 id=mysql简介>MySQL简介</h2><p>我们在前一章中介绍了数据库和SQL。正如所述，数据的所有存储、检索、管理和处理实际上是由数据库软件——DBMS（数据库管理系统）完成的。MySQL是一种DBMS，即它是一种数据库软件。</p><h3 id=客户机服务器软件>客户机—服务器软件</h3><p>DBMS可分为两类：一类为基于共享文件系统的DBMS，另一类为基于客户机—服务器的DBMS。前者（包括诸如Microsoft Access和FileMaker)用于桌面用途，通常不用于高端或更关键的应用。</p><p>MySQL、Oracle以及Microsoft SQL Server等数据库是基于客户机—服务器的数据库。客户机—服务器应用分为两个不同的部分。服务器部分是负责所有数据访问和处理的一个软件。这个软件运行在称为数据库服务器的计算机上。</p><p>与数据文件打交道的只有服务器软件。关于数据、数据添加、删除和数据更新的所有请求都由服务器软件完成。这些请求或更改来自运行客户机软件的计算机。客户机是与用户打交道的软件。例如，如果你请求一个按字母顺序列出的产品表，则客户机软件通过网络提交该请求给服务器软件。服务器软件处理这个请求，根据需要过滤、丢弃和排序数据；然后把结果送回到你的客户机软件。</p><blockquote><p>服务器软件为MySQL DBMS。你可以在本地安装的副本上运行，
+也可以连接到运行在你具有访问权的远程服务器上的一个副本。</p><p>客户机可以是MySQL提供的工具、脚本语言（如Perl）、Web应用
+开发语言（如ASP、ColdFusion、JSP和PHP）、程序设计语言（如
+C、C++、Java）等。</p></blockquote><h3 id=mysql工具客户机>MySQL工具(客户机)</h3><ul><li><p>mysql命令行实用程序</p><p>使用<code>mysql -u root -p</code>输入密码后即可访问</p><p><img src=https://cdn.jsdelivr.net/gh/kwwgoo/cdn/custom/image-20210503153124481.png loading=lazy alt=image-20210503153124481></p></li><li><p>MySQL Workbench</p><p><a class=link href=http://c.biancheng.net/mysql/ target=_blank rel=noopener>MySQL</a> Workbench 是一款专为 MySQL 设计的集成化桌面软件，也是下一代的可视化数据库设计、管理的工具，它同时有开源和商业化两个版本。该软件支持 Windows 和 Linux 系统，可以从 <a class=link href=https://dev.mysql.com/downloads/workbench/ target=_blank rel=noopener>https://dev.mysql.com/downloads/workbench/</a> 下载。下载完成打开后图样。</p><p><img src=https://cdn.jsdelivr.net/gh/kwwgoo/cdn/custom/image-20210503153440718.png loading=lazy alt=image-20210503153440718></p></li></ul><h2 id=使用mysql>使用MySQL</h2><h3 id=选择数据库>选择数据库</h3><p>使用USE关键词.<code>USE test</code></p><blockquote><p>test为自己建立的数据库名字</p></blockquote><h3 id=了解数据库和表>了解数据库和表</h3><ol><li><p><code>SHOW DATABASES;</code>返回可用数据库的一个列表。包含在这个列表中的可能是MySQL内部使用的数据库（如例子中的mysql和(information_schema）。当然，你自己的数据库列表可能看上去与这里的不一样。</p></li><li><p><code>SHOW TABLES;</code>获得一个数据库内的表的列表。</p></li><li><p><code>SHOW COLUMNS FROM customers;</code>要求给出一个表名（ 这个例子中的FROM customers），它对每个字段返回一行，行中包含字段名、数据类型、是否允许NULL、键信息、默认值以及其他信息（如字段cust_id的auto_increment）。</p><blockquote><p>DESCRIBE语句 MySQL支持用DESCRIBE作为SHOW COLUMNS
+FROM的一种快捷方式。换句话说，DESCRIBE customers;是
+SHOW COLUMNS FROM customers;的一种快捷方式。</p></blockquote></li></ol><h2 id=检索数据>检索数据</h2><h3 id=检索列>检索列</h3><blockquote><p>使用SELECT语句</p></blockquote><p><code>SELECT id,name FROM students</code>检索students表内的id和name列，或者使用<code>SELECT * FROM students</code>检索所有列。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=p>*</span> <span class=n>from</span> <span class=n>students</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>id</span> <span class=p>|</span> <span class=n>class_id</span> <span class=p>|</span> <span class=n>name</span>   <span class=p>|</span> <span class=n>gender</span> <span class=p>|</span> <span class=n>score</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>1</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小明</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>90</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>2</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小红</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>95</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>3</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小军</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>88</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>4</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小米</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>73</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>5</span> <span class=p>|</span>        <span class=n>2</span> <span class=p>|</span> <span class=n>小白</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>81</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>6</span> <span class=p>|</span>        <span class=n>2</span> <span class=p>|</span> <span class=n>小兵</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>55</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>7</span> <span class=p>|</span>        <span class=n>2</span> <span class=p>|</span> <span class=n>小林</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>85</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>8</span> <span class=p>|</span>        <span class=n>3</span> <span class=p>|</span> <span class=n>小新</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>91</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>9</span> <span class=p>|</span>        <span class=n>3</span> <span class=p>|</span> <span class=n>小王</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>89</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>10</span> <span class=p>|</span>        <span class=n>3</span> <span class=p>|</span> <span class=n>小丽</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>85</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=n>10</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=检索不同的行>检索不同的行</h3><blockquote><p>解决办法是使用DISTINCT关键字，顾名思义，此关键字指示MySQL
+只返回不同的值。</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>Select </span><span class=n>distinct</span> <span class=n>class_id</span> <span class=n>from</span> <span class=n>students</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+----------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>class_id</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>        <span class=n>1</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>        <span class=n>2</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>        <span class=n>3</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----------+</span>
+</span></span><span class=line><span class=cl><span class=n>3</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=限制结果>限制结果</h3><p><code>limit 0,1</code>意为从第0行开始取一行</p><p><code>LIMIT 5, 5</code>指示MySQL返回从行5开始的5行。第一个数为开始位置，第二个数为要检索的行数。</p><p><img src=https://cdn.jsdelivr.net/gh/kwwgoo/cdn/custom/image-20210503160126803.png loading=lazy alt=image-20210503160126803></p><h2 id=排序检索数据>排序检索数据</h2><ol><li><p>按照成绩升序排列</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>mysql&gt; select name,score from students
+</span></span><span class=line><span class=cl>    -&gt; order by score;
+</span></span></code></pre></td></tr></table></div></div></li><li><p>按照成绩降序排列</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=n>name</span><span class=p>,</span><span class=n>score</span> <span class=n>from</span> <span class=n>students</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=n>order</span> <span class=n>by</span> <span class=n>score</span> <span class=n>desc</span><span class=p>;</span>
+</span></span></code></pre></td></tr></table></div></div></li></ol><h2 id=过滤检索数据>过滤检索数据</h2><div class=table-wrapper><table><thead><tr><th style=text-align:center>操作符</th><th style=text-align:center>说 明</th></tr></thead><tbody><tr><td style=text-align:center>=</td><td style=text-align:center>等于</td></tr><tr><td style=text-align:center>&lt;></td><td style=text-align:center>不等于</td></tr><tr><td style=text-align:center>!=</td><td style=text-align:center>不等于</td></tr><tr><td style=text-align:center>&lt;=</td><td style=text-align:center>小于等于</td></tr><tr><td style=text-align:center>BETWEEN</td><td style=text-align:center>在指定的两个值之间</td></tr></tbody></table></div><h3 id=单where语句>单WHERE语句</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=p>*</span> <span class=n>from</span> <span class=n>students</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>class_id</span><span class=p>=</span><span class=n>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>id</span> <span class=p>|</span> <span class=n>class_id</span> <span class=p>|</span> <span class=n>name</span>   <span class=p>|</span> <span class=n>gender</span> <span class=p>|</span> <span class=n>score</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>1</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小明</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>90</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>2</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小红</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>95</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>3</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小军</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>88</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>4</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小米</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>73</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=n>4</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=p>*</span> <span class=n>from</span> <span class=n>students</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>score</span> <span class=n>between</span> <span class=n>90</span> <span class=n>AND</span> <span class=n>100</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=n>order</span> <span class=n>by</span> <span class=n>score</span> <span class=n>desc</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>id</span> <span class=p>|</span> <span class=n>class_id</span> <span class=p>|</span> <span class=n>name</span>   <span class=p>|</span> <span class=n>gender</span> <span class=p>|</span> <span class=n>score</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>2</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小红</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>95</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>8</span> <span class=p>|</span>        <span class=n>3</span> <span class=p>|</span> <span class=n>小新</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>91</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>1</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小明</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>90</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=n>3</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=组合where语句>组合WHERE语句</h3><ol><li><p>AND操作符</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=p>*</span> <span class=n>from</span> <span class=n>students</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>score</span><span class=p>&gt;=</span><span class=n>90</span> <span class=n>AND</span> <span class=n>class_id</span><span class=p>=</span><span class=n>1</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>id</span> <span class=p>|</span> <span class=n>class_id</span> <span class=p>|</span> <span class=n>name</span>   <span class=p>|</span> <span class=n>gender</span> <span class=p>|</span> <span class=n>score</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>1</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小明</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>90</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>2</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小红</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>95</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=n>2</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>上述例子中使用了只包含一个关键字AND的语句，把两个过滤条件组
+合在一起。还可以添加多个过滤条件，每添加一条就要使用一个AND。</p></blockquote></li><li><p>OR操作符</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=p>*</span> <span class=n>from</span> <span class=n>students</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>score</span><span class=p>&gt;=</span><span class=n>90</span> <span class=n>AND</span> <span class=n>class_id</span><span class=p>=</span><span class=n>1</span> <span class=n>OR</span> <span class=n>class_id</span><span class=p>=</span><span class=n>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>id</span> <span class=p>|</span> <span class=n>class_id</span> <span class=p>|</span> <span class=n>name</span>   <span class=p>|</span> <span class=n>gender</span> <span class=p>|</span> <span class=n>score</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>1</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小明</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>90</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>2</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小红</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>95</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>5</span> <span class=p>|</span>        <span class=n>2</span> <span class=p>|</span> <span class=n>小白</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>81</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>6</span> <span class=p>|</span>        <span class=n>2</span> <span class=p>|</span> <span class=n>小兵</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>55</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>7</span> <span class=p>|</span>        <span class=n>2</span> <span class=p>|</span> <span class=n>小林</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>85</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=n>5</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=p>*</span> <span class=n>from</span> <span class=n>students</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>score</span><span class=p>&gt;=</span><span class=n>90</span> <span class=n>AND</span> <span class=p>(</span><span class=n>class_id</span><span class=p>=</span><span class=n>1</span> <span class=n>OR</span> <span class=n>class_id</span><span class=p>=</span><span class=n>2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=n>order</span> <span class=n>by</span> <span class=n>score</span> <span class=n>desc</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>id</span> <span class=p>|</span> <span class=n>class_id</span> <span class=p>|</span> <span class=n>name</span>   <span class=p>|</span> <span class=n>gender</span> <span class=p>|</span> <span class=n>score</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>2</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小红</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>95</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>1</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小明</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>90</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=n>2</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>SQL（像多数语言一样）在处理OR操作符前，优先处理AND操作符。</p><p>在WHERE子句中使用圆括号 任何时候使用具有AND和OR操作符的WHERE子句，都应该使用圆括号明确地分组操作符。不要过分依赖默认计算次序，即使它确实是你想要的东西也是如此。使用圆括号没有什么坏处，它能消除歧义。</p></blockquote></li><li><p>IN操作符</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=p>*</span> <span class=n>from</span> <span class=n>students</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>class_id</span> <span class=k>IN</span> <span class=p>(</span><span class=n>1</span><span class=p>,</span><span class=n>2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=n>order</span> <span class=n>by</span> <span class=n>score</span> <span class=n>desc</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>id</span> <span class=p>|</span> <span class=n>class_id</span> <span class=p>|</span> <span class=n>name</span>   <span class=p>|</span> <span class=n>gender</span> <span class=p>|</span> <span class=n>score</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>2</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小红</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>95</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>1</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小明</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>90</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>3</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小军</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>88</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>7</span> <span class=p>|</span>        <span class=n>2</span> <span class=p>|</span> <span class=n>小林</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>85</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>5</span> <span class=p>|</span>        <span class=n>2</span> <span class=p>|</span> <span class=n>小白</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>81</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>4</span> <span class=p>|</span>        <span class=n>1</span> <span class=p>|</span> <span class=n>小米</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>73</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>6</span> <span class=p>|</span>        <span class=n>2</span> <span class=p>|</span> <span class=n>小兵</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>55</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=n>7</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>圆括号内是匹配条件，和OR操作符相同</p></blockquote></li><li><p>NOT操作符</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=p>*</span> <span class=n>from</span> <span class=n>students</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>class_id</span> <span class=n>NOT</span> <span class=k>IN</span> <span class=p>(</span><span class=n>1</span><span class=p>,</span><span class=n>2</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>id</span> <span class=p>|</span> <span class=n>class_id</span> <span class=p>|</span> <span class=n>name</span>   <span class=p>|</span> <span class=n>gender</span> <span class=p>|</span> <span class=n>score</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>8</span> <span class=p>|</span>        <span class=n>3</span> <span class=p>|</span> <span class=n>小新</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>91</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span>  <span class=n>9</span> <span class=p>|</span>        <span class=n>3</span> <span class=p>|</span> <span class=n>小王</span>   <span class=p>|</span> <span class=n>M</span>      <span class=p>|</span>    <span class=n>89</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>10</span> <span class=p>|</span>        <span class=n>3</span> <span class=p>|</span> <span class=n>小丽</span>   <span class=p>|</span> <span class=n>F</span>      <span class=p>|</span>    <span class=n>85</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----+----------+--------+--------+-------+</span>
+</span></span><span class=line><span class=cl><span class=n>3</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>WHERE子句中的NOT操作符有且只有一个功能，那就是否定它之后所
+跟的任何条件。MySQL中的NOT MySQL支持使用NOT 对IN 、BETWEEN 和
+EXISTS子句取反，这与多数其他DBMS允许使用NOT对各种条件
+取反有很大的差别。</p></blockquote></li></ol><h2 id=用通配符进行过滤>用通配符进行过滤</h2><ol><li><p>LIKE操作符搭配通配符</p></li><li><p>%通配符任意字符多次(包括0次)</p></li><li><p>_通配符任意字符单次</p></li></ol><h2 id=用正则表达式进行搜索>用正则表达式进行搜索</h2><blockquote><p>LIKE匹配整个列。如果被匹配的文本在列值中出现，LIKE将不会找到它，相应的行也不被返回（除非使用
+通配符）。而REGEXP在列值内进行匹配，如果被匹配的文本在列值中出现，REGEXP将会找到它，相应的行将被返回。这是一个非常重要的差别。那么，REGEXP能不能用来匹配整个列值（从而起与LIKE相同的作用）？答案是肯定的，使用^和$定位符（anchor）即可。</p></blockquote><ol><li><p>匹配任意字符</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=n>prod_name</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=n>from</span> <span class=n>products</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>prod_name</span> <span class=n>regexp</span> <span class=s1>&#39;.&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+----------------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>prod_name</span>      <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----------------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=p>.</span><span class=n>5</span> <span class=n>ton</span> <span class=n>anvil</span>   <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>1</span> <span class=n>ton</span> <span class=n>anvil</span>    <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>2</span> <span class=n>ton</span> <span class=n>anvil</span>    <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>Detonator</span>      <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>Bird</span> <span class=n>seed</span>      <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>Carrots</span>        <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>Fuses</span>          <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>JetPack</span> <span class=n>1000</span>   <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>JetPack</span> <span class=n>2000</span>   <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>Oil</span> <span class=n>can</span>        <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>Safe</span>           <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>Sling</span>          <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>TNT</span> <span class=p>(</span><span class=n>1</span> <span class=n>stick</span><span class=p>)</span>  <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>TNT</span> <span class=p>(</span><span class=n>5</span> <span class=n>sticks</span><span class=p>)</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----------------+</span>
+</span></span><span class=line><span class=cl><span class=n>14</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div></li><li><p>匹配产品名中有数字的行</p></li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=n>prod_name</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=n>from</span> <span class=n>products</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>prod_name</span> <span class=n>regexp</span> <span class=s1>&#39;[0-9]&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+----------------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>prod_name</span>      <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----------------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=p>.</span><span class=n>5</span> <span class=n>ton</span> <span class=n>anvil</span>   <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>1</span> <span class=n>ton</span> <span class=n>anvil</span>    <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>2</span> <span class=n>ton</span> <span class=n>anvil</span>    <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>JetPack</span> <span class=n>1000</span>   <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>JetPack</span> <span class=n>2000</span>   <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>TNT</span> <span class=p>(</span><span class=n>1</span> <span class=n>stick</span><span class=p>)</span>  <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>TNT</span> <span class=p>(</span><span class=n>5</span> <span class=n>sticks</span><span class=p>)</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----------------+</span>
+</span></span><span class=line><span class=cl><span class=n>7</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>01</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>正如所见，<code>[]</code>是另一种形式的OR语句</p><p>字符集合也可以被否定，即，它们将匹配除指定字符外的任何东西。
+为否定一个字符集，在集合的开始处放置一个^即可。因此，尽管<code>[123]</code>
+匹配字符1、2或3，但<code>[^123]</code>却匹配除这些字符外的任何东西。</p></blockquote><ol start=3><li>匹配特殊字符</li></ol><blockquote><p>为了匹配特殊字符，必须用\为前导。\-表示查找-，\.表示查找.。</p><p>\或\? 多数正则表达式实现使用单个反斜杠转义特殊字符，以便能使用这些字符本身。但MySQL要求两个反斜杠（MySQL自己解释一个，正则表达式库解释另一个）。</p></blockquote><ol start=4><li><p>匹配多个实例</p><div class=table-wrapper><table><thead><tr><th style=text-align:center>元 字 符</th><th style=text-align:center>说 明</th></tr></thead><tbody><tr><td style=text-align:center>*</td><td style=text-align:center>0个或多个匹配</td></tr><tr><td style=text-align:center>+</td><td style=text-align:center>1个或多个匹配（等于{1,}）</td></tr><tr><td style=text-align:center>?</td><td style=text-align:center>0个或1个匹配（等于{0,1}）</td></tr><tr><td style=text-align:center>{n}</td><td style=text-align:center>指定数目的匹配</td></tr><tr><td style=text-align:center>{n,}</td><td style=text-align:center>不少于指定数目的匹配</td></tr><tr><td style=text-align:center>{n,m}</td><td style=text-align:center>匹配数目的范围（m不超过255）</td></tr></tbody></table></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=n>prod_name</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=n>from</span> <span class=n>products</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>prod_name</span> <span class=n>regexp</span> <span class=s1>&#39;\\([0-9] sticks?\\)&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+----------------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>prod_name</span>      <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----------------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>TNT</span> <span class=p>(</span><span class=n>1</span> <span class=n>stick</span><span class=p>)</span>  <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>TNT</span> <span class=p>(</span><span class=n>5</span> <span class=n>sticks</span><span class=p>)</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+----------------+</span>
+</span></span><span class=line><span class=cl><span class=n>2</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div></li></ol><blockquote><p>正则表达式\([0-9] sticks?\)需要解说一下。\(匹配)，
+[0-9]匹配任意数字（这个例子中为1和5），sticks?匹配stick
+和sticks（s后的?使s可选，因为?匹配它前面的任何字符的0次或1次出
+现），\)匹配)。没有?，匹配stick和sticks会非常困难。</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=n>prod_name</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=n>from</span> <span class=n>products</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>prod_name</span> <span class=n>regexp</span> <span class=s1>&#39;[[:digit:]]{4}&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+--------------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>prod_name</span>    <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+--------------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>JetPack</span> <span class=n>1000</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>JetPack</span> <span class=n>2000</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+--------------+</span>
+</span></span><span class=line><span class=cl><span class=n>2</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>如前所述，[:digit:]匹配任意数字，因而它为数字的一个集
+合。{4}确切地要求它前面的字符（任意数字）出现4次，所以
+[[:digit:]]{4}匹配连在一起的任意4位数字。</p></blockquote><ol start=5><li><p>定位符</p><div class=table-wrapper><table><thead><tr><th style=text-align:center>元 字 符</th><th style=text-align:center>说 明</th></tr></thead><tbody><tr><td style=text-align:center>^</td><td style=text-align:center>文本的开始</td></tr><tr><td style=text-align:center>$</td><td style=text-align:center>文本的结尾</td></tr><tr><td style=text-align:center>[[:&lt;:]]</td><td style=text-align:center>词的开始</td></tr><tr><td style=text-align:center>[[:>:]]</td><td style=text-align:center>词的结尾</td></tr></tbody></table></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=n>prod_name</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=n>from</span> <span class=n>products</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>prod_name</span> <span class=n>regexp</span> <span class=s1>&#39;^[0-9\\.]&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+--------------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>prod_name</span>    <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+--------------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=p>.</span><span class=n>5</span> <span class=n>ton</span> <span class=n>anvil</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>1</span> <span class=n>ton</span> <span class=n>anvil</span>  <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>2</span> <span class=n>ton</span> <span class=n>anvil</span>  <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+--------------+</span>
+</span></span><span class=line><span class=cl><span class=n>3</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div></li></ol><blockquote><p><code>^</code>匹配串的开始。因此，^[0-9\.]只在.或任意数字为串中第
+一个字符时才匹配它们。没有^，则还要多检索出4个别的行（那
+些中间有数字的行）。</p><p><strong>^的双重用途 ^有两种用法。在集合中（用[和]定义），用它
+来否定该集合，否则，用来指串的开始处。</strong></p></blockquote><blockquote><p><strong>使REGEXP起类似LIKE的作用 本章前面说过，LIKE和REGEXP
+的不同在于，LIKE匹配整个串而REGEXP匹配子串。利用定位
+符，通过用^开始每个表达式，用$结束每个表达式，可以使
+REGEXP的作用与LIKE一样。</strong></p></blockquote><h2 id=计算字段>计算字段</h2><p>Concat()拼接串，即把多个串连接起来形成一个较长的串。
+Concat()需要一个或多个指定的串，各个串之间用逗号分隔。
+上面的SELECT语句连接以下4个元素：</p><h2 id=分组数据>分组数据</h2><p><strong> GROUP BY子句可以包含任意数目的列。这使得能对分组进行嵌套，
+为数据分组提供更细致的控制。
+ 如果在GROUP BY子句中嵌套了分组，数据将在最后规定的分组上
+进行汇总。换句话说，在建立分组时，指定的所有列都一起计算
+（所以不能从个别的列取回数据）。
+ GROUP BY子句中列出的每个列都必须是检索列或有效的表达式
+（但不能是聚集函数）。如果在SELECT中使用表达式，则必须在
+GROUP BY子句中指定相同的表达式。不能使用别名。
+ 除聚集计算语句外，SELECT语句中的每个列都必须在GROUP BY子
+句中给出。
+ 如果分组列中具有NULL值，则NULL将作为一个分组返回。如果列
+中有多行NULL值，它们将分为一组。
+ GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>mysql&gt; select * from students;
+</span></span><span class=line><span class=cl>+----+----------+--------+--------+-------+
+</span></span><span class=line><span class=cl>| id | class_id | name   | gender | score |
+</span></span><span class=line><span class=cl>+----+----------+--------+--------+-------+
+</span></span><span class=line><span class=cl>|  1 |        1 | 小明   | M      |    90 |
+</span></span><span class=line><span class=cl>|  2 |        1 | 小红   | F      |    95 |
+</span></span><span class=line><span class=cl>|  3 |        1 | 小军   | M      |    88 |
+</span></span><span class=line><span class=cl>|  4 |        1 | 小米   | F      |    73 |
+</span></span><span class=line><span class=cl>|  5 |        2 | 小白   | F      |    81 |
+</span></span><span class=line><span class=cl>|  6 |        2 | 小兵   | M      |    55 |
+</span></span><span class=line><span class=cl>|  7 |        2 | 小林   | M      |    85 |
+</span></span><span class=line><span class=cl>|  8 |        3 | 小新   | F      |    91 |
+</span></span><span class=line><span class=cl>|  9 |        3 | 小王   | M      |    89 |
+</span></span><span class=line><span class=cl>| 10 |        3 | 小丽   | F      |    85 |
+</span></span><span class=line><span class=cl>+----+----------+--------+--------+-------+
+</span></span><span class=line><span class=cl>10 rows in set (0.01 sec)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>mysql&gt; select class_id,AVG(score) as avg_score
+</span></span><span class=line><span class=cl>    -&gt; form students
+</span></span><span class=line><span class=cl>    -&gt; group by class_id;
+</span></span><span class=line><span class=cl>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#39;form students
+</span></span><span class=line><span class=cl>group by class_id&#39; at line 2
+</span></span><span class=line><span class=cl>mysql&gt; select class_id,AVG(score) as avg_score
+</span></span><span class=line><span class=cl>    -&gt; from students
+</span></span><span class=line><span class=cl>    -&gt; group by class_id;
+</span></span><span class=line><span class=cl>+----------+-----------+
+</span></span><span class=line><span class=cl>| class_id | avg_score |
+</span></span><span class=line><span class=cl>+----------+-----------+
+</span></span><span class=line><span class=cl>|        1 |   86.5000 |
+</span></span><span class=line><span class=cl>|        2 |   73.6667 |
+</span></span><span class=line><span class=cl>|        3 |   88.3333 |
+</span></span><span class=line><span class=cl>+----------+-----------+
+</span></span><span class=line><span class=cl>3 rows in set (0.00 sec)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>mysql&gt; select gender,AVG(score) as avg_score
+</span></span><span class=line><span class=cl>    -&gt; from students
+</span></span><span class=line><span class=cl>    -&gt; group by gender;
+</span></span><span class=line><span class=cl>+--------+-----------+
+</span></span><span class=line><span class=cl>| gender | avg_score |
+</span></span><span class=line><span class=cl>+--------+-----------+
+</span></span><span class=line><span class=cl>| M      |   81.4000 |
+</span></span><span class=line><span class=cl>| F      |   85.0000 |
+</span></span><span class=line><span class=cl>+--------+-----------+
+</span></span><span class=line><span class=cl>2 rows in set (0.00 sec)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>mysql&gt; select gender,MAX(score) as MAX_score
+</span></span><span class=line><span class=cl>    -&gt; from students
+</span></span><span class=line><span class=cl>    -&gt; group by gender;
+</span></span><span class=line><span class=cl>+--------+-----------+
+</span></span><span class=line><span class=cl>| gender | MAX_score |
+</span></span><span class=line><span class=cl>+--------+-----------+
+</span></span><span class=line><span class=cl>| M      |        90 |
+</span></span><span class=line><span class=cl>| F      |        95 |
+</span></span><span class=line><span class=cl>+--------+-----------+
+</span></span><span class=line><span class=cl>2 rows in set (0.00 sec)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>mysql&gt; select class_id,MAX(score) as MAX_score
+</span></span><span class=line><span class=cl>    -&gt; from students
+</span></span><span class=line><span class=cl>    -&gt; group by class_id;
+</span></span><span class=line><span class=cl>+----------+-----------+
+</span></span><span class=line><span class=cl>| class_id | MAX_score |
+</span></span><span class=line><span class=cl>+----------+-----------+
+</span></span><span class=line><span class=cl>|        1 |        95 |
+</span></span><span class=line><span class=cl>|        2 |        85 |
+</span></span><span class=line><span class=cl>|        3 |        91 |
+</span></span><span class=line><span class=cl>+----------+-----------+
+</span></span><span class=line><span class=cl>3 rows in set (0.00 sec)
+</span></span></code></pre></td></tr></table></div></div><h2 id=连接表>连接表</h2><ol><li><p>使用<code>WHERE</code>进行连接</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=n>mysql</span><span class=p>&gt;</span> <span class=nb>select </span><span class=n>vend_name</span><span class=p>,</span><span class=n>prod_name</span><span class=p>,</span><span class=n>prod_price</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=n>from</span> <span class=n>vendors</span><span class=p>,</span><span class=n>products</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=nb>where </span><span class=n>vendors</span><span class=p>.</span><span class=n>vend_id</span> <span class=p>=</span> <span class=n>products</span><span class=p>.</span><span class=n>vend_id</span>
+</span></span><span class=line><span class=cl>    <span class=p>-&gt;</span> <span class=n>order</span> <span class=n>by</span> <span class=n>vend_name</span><span class=p>,</span><span class=n>prod_price</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>+-------------+----------------+------------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>vend_name</span>   <span class=p>|</span> <span class=n>prod_name</span>      <span class=p>|</span> <span class=n>prod_price</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+-------------+----------------+------------+</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>ACME</span>        <span class=p>|</span> <span class=n>Carrots</span>        <span class=p>|</span>       <span class=n>2</span><span class=p>.</span><span class=n>50</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>ACME</span>        <span class=p>|</span> <span class=n>TNT</span> <span class=p>(</span><span class=n>1</span> <span class=n>stick</span><span class=p>)</span>  <span class=p>|</span>       <span class=n>2</span><span class=p>.</span><span class=n>50</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>ACME</span>        <span class=p>|</span> <span class=n>Sling</span>          <span class=p>|</span>       <span class=n>4</span><span class=p>.</span><span class=n>49</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>ACME</span>        <span class=p>|</span> <span class=n>Bird</span> <span class=n>seed</span>      <span class=p>|</span>      <span class=n>10</span><span class=p>.</span><span class=n>00</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>ACME</span>        <span class=p>|</span> <span class=n>TNT</span> <span class=p>(</span><span class=n>5</span> <span class=n>sticks</span><span class=p>)</span> <span class=p>|</span>      <span class=n>10</span><span class=p>.</span><span class=n>00</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>ACME</span>        <span class=p>|</span> <span class=n>Detonator</span>      <span class=p>|</span>      <span class=n>13</span><span class=p>.</span><span class=n>00</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>ACME</span>        <span class=p>|</span> <span class=n>Safe</span>           <span class=p>|</span>      <span class=n>50</span><span class=p>.</span><span class=n>00</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>Anvils</span> <span class=nb>R </span><span class=n>Us</span> <span class=p>|</span> <span class=p>.</span><span class=n>5</span> <span class=n>ton</span> <span class=n>anvil</span>   <span class=p>|</span>       <span class=n>5</span><span class=p>.</span><span class=n>99</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>Anvils</span> <span class=nb>R </span><span class=n>Us</span> <span class=p>|</span> <span class=n>1</span> <span class=n>ton</span> <span class=n>anvil</span>    <span class=p>|</span>       <span class=n>9</span><span class=p>.</span><span class=n>99</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>Anvils</span> <span class=nb>R </span><span class=n>Us</span> <span class=p>|</span> <span class=n>2</span> <span class=n>ton</span> <span class=n>anvil</span>    <span class=p>|</span>      <span class=n>14</span><span class=p>.</span><span class=n>99</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>Jet</span> <span class=nb>Set </span>    <span class=p>|</span> <span class=n>JetPack</span> <span class=n>1000</span>   <span class=p>|</span>      <span class=n>35</span><span class=p>.</span><span class=n>00</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>Jet</span> <span class=nb>Set </span>    <span class=p>|</span> <span class=n>JetPack</span> <span class=n>2000</span>   <span class=p>|</span>      <span class=n>55</span><span class=p>.</span><span class=n>00</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>LT</span> <span class=n>Supplies</span> <span class=p>|</span> <span class=n>Fuses</span>          <span class=p>|</span>       <span class=n>3</span><span class=p>.</span><span class=n>42</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>|</span> <span class=n>LT</span> <span class=n>Supplies</span> <span class=p>|</span> <span class=n>Oil</span> <span class=n>can</span>        <span class=p>|</span>       <span class=n>8</span><span class=p>.</span><span class=n>99</span> <span class=p>|</span>
+</span></span><span class=line><span class=cl><span class=p>+-------------+----------------+------------+</span>
+</span></span><span class=line><span class=cl><span class=n>14</span> <span class=n>rows</span> <span class=k>in</span> <span class=nb>set </span><span class=p>(</span><span class=n>0</span><span class=p>.</span><span class=n>00</span> <span class=n>sec</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>目前为止所用的联结称为等值联结（equijoin），它基于两个表之间的相等测试。这种联结也称为内部联结</p></li><li><p>内部联结</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>mysql&gt; select vend_name,prod_name,prod_price
+</span></span><span class=line><span class=cl>    -&gt; from vendors INNER JOIN products
+</span></span><span class=line><span class=cl>    -&gt; ON vendors.vend_id = products.vend_id;
+</span></span><span class=line><span class=cl>+-------------+----------------+------------+
+</span></span><span class=line><span class=cl>| vend_name   | prod_name      | prod_price |
+</span></span><span class=line><span class=cl>+-------------+----------------+------------+
+</span></span><span class=line><span class=cl>| Anvils R Us | .5 ton anvil   |       5.99 |
+</span></span><span class=line><span class=cl>| Anvils R Us | 1 ton anvil    |       9.99 |
+</span></span><span class=line><span class=cl>| Anvils R Us | 2 ton anvil    |      14.99 |
+</span></span><span class=line><span class=cl>| LT Supplies | Fuses          |       3.42 |
+</span></span><span class=line><span class=cl>| LT Supplies | Oil can        |       8.99 |
+</span></span><span class=line><span class=cl>| ACME        | Detonator      |      13.00 |
+</span></span><span class=line><span class=cl>| ACME        | Bird seed      |      10.00 |
+</span></span><span class=line><span class=cl>| ACME        | Carrots        |       2.50 |
+</span></span><span class=line><span class=cl>| ACME        | Safe           |      50.00 |
+</span></span><span class=line><span class=cl>| ACME        | Sling          |       4.49 |
+</span></span><span class=line><span class=cl>| ACME        | TNT (1 stick)  |       2.50 |
+</span></span><span class=line><span class=cl>| ACME        | TNT (5 sticks) |      10.00 |
+</span></span><span class=line><span class=cl>| Jet Set     | JetPack 1000   |      35.00 |
+</span></span><span class=line><span class=cl>| Jet Set     | JetPack 2000   |      55.00 |
+</span></span><span class=line><span class=cl>+-------------+----------------+------------+
+</span></span><span class=line><span class=cl>14 rows in set (0.00 sec)
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>此语句中的SELECT与前面的SELECT语句相同，但FROM子句不同。这里，两个表之间的关系是FROM子句的组成部分，以INNERJOIN指定。在使用这种语法时，联结条件用特定的ON子句而不是WHERE子句给出。传递给ON的实际条件与传递给WHERE的相同。</p></blockquote></li><li><p>连接多个表</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>mysql&gt; select prod_name,vend_name,prod_price,quantity
+</span></span><span class=line><span class=cl>    -&gt; from orderitems,vendors,products
+</span></span><span class=line><span class=cl>    -&gt; where products.vend_id = vendors.vend_id
+</span></span><span class=line><span class=cl>    -&gt; AND orderitems.prod_id = products.prod_id
+</span></span><span class=line><span class=cl>    -&gt; AND order_num = 20005;
+</span></span><span class=line><span class=cl>+----------------+-------------+------------+----------+
+</span></span><span class=line><span class=cl>| prod_name      | vend_name   | prod_price | quantity |
+</span></span><span class=line><span class=cl>+----------------+-------------+------------+----------+
+</span></span><span class=line><span class=cl>| .5 ton anvil   | Anvils R Us |       5.99 |       10 |
+</span></span><span class=line><span class=cl>| 1 ton anvil    | Anvils R Us |       9.99 |        3 |
+</span></span><span class=line><span class=cl>| TNT (5 sticks) | ACME        |      10.00 |        5 |
+</span></span><span class=line><span class=cl>| Bird seed      | ACME        |      10.00 |        1 |
+</span></span><span class=line><span class=cl>+----------------+-------------+------------+----------+
+</span></span><span class=line><span class=cl>4 rows in set (0.00 sec)
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>此例子显示编号为20005的订单中的物品。订单物品存储在orderitems表中。每个产品按其产品ID存储，它引用products表中的产品。这些产品通过供应商ID联结到vendors表中相应的供应商，
+供应商ID存储在每个产品的记录中。这里的FROM子句列出了3个表，而WHERE子句定义了这两个联结条件，而第三个联结条件用来过滤出订单20005中的物品。</p></blockquote></li></ol></section><footer class=article-footer><section class=article-tags><a href=/tags/mysql/>mysql</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span>最后更新于 Apr 14, 2022 05:10 UTC</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title>相关文章</h2><div class=related-contents><div class="flex article-list--tile"><article class=has-image><a href=/p/shotcodes/><div class=article-image><img src=/p/shotcodes/featured-image.adbe4c116ea56693ee09673ea5d91a6a_hua50370e21be7dc972829f790f20d1ab8_65920_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy alt="Featured image of post Shotcodes" data-hash="md5-rb5MEW6lZpPuCWc+pdkaag=="></div><div class=article-details><h2 class=article-title>Shotcodes</h2></div></a></article><article><a href=/p/%E9%AD%94%E6%94%B9stack%E4%B8%BB%E9%A2%98/><div class=article-details><h2 class=article-title>魔改stack主题</h2></div></a></article><article class=has-image><a href=/p/hugo-deploy/><div class=article-image><img src=/p/hugo-deploy/_hu30910665284931ace4f57faa1e01d828_163514_3495db9c44c6cf3e70cff42a6c014ccc.jpg width=250 height=150 loading=lazy alt="Featured image of post Hugo Deploy" data-hash="md5-hXSAJvbH4QTFUvwU7xPVWA=="></div><div class=article-details><h2 class=article-title>Hugo Deploy</h2></div></a></article><article class=has-image><a href=/p/hello-worldmy-blog/><div class=article-image><img src=/p/hello-worldmy-blog/hexohugo.7d227f61e3b59c07dedb2fecb95fad10_hu7f2d97f118dea80fd8ec341b875b0212_15492_250x150_fill_q75_h2_box_smart1_2.webp width=250 height=150 loading=lazy alt="Featured image of post Hello World,My Blog" data-hash="md5-fSJ/YeO1nAfe2y/suV+tEA=="></div><div class=article-details><h2 class=article-title>Hello World,My Blog</h2></div></a></article></div></div></aside><script src=https://cdn.jsdelivr.net/npm/twikoo@1.5.3/dist/twikoo.all.min.js></script><div id=tcomment></div><style>.twikoo{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}:root[data-scheme=dark]{--twikoo-body-text-color-main:rgba(255, 255, 255, 0.9);--twikoo-body-text-color:rgba(255, 255, 255, 0.7)}.twikoo .el-input-group__prepend,.twikoo .tk-action-icon,.twikoo .tk-time,.twikoo .tk-comments-count{color:var(--twikoo-body-text-color)}.twikoo .el-input__inner,.twikoo .el-textarea__inner,.twikoo .tk-preview-container,.twikoo .tk-content,.twikoo .tk-nick,.twikoo .tk-send{color:var(--twikoo-body-text-color-main)}.twikoo .el-button{color:var(--twikoo-body-text-color)!important}</style><script>twikoo.init({envId:"twikoo-3gos5ikbf8bca455",el:"#tcomment"})</script><footer class=site-footer><section class=copyright>&copy;
+2022 kwwgoo's Blog</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.11.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#mysql安装>MySQL安装</a></li><li><a href=#mysql简介>MySQL简介</a><ol><li><a href=#客户机服务器软件>客户机—服务器软件</a></li><li><a href=#mysql工具客户机>MySQL工具(客户机)</a></li></ol></li><li><a href=#使用mysql>使用MySQL</a><ol><li><a href=#选择数据库>选择数据库</a></li><li><a href=#了解数据库和表>了解数据库和表</a></li></ol></li><li><a href=#检索数据>检索数据</a><ol><li><a href=#检索列>检索列</a></li><li><a href=#检索不同的行>检索不同的行</a></li><li><a href=#限制结果>限制结果</a></li></ol></li><li><a href=#排序检索数据>排序检索数据</a></li><li><a href=#过滤检索数据>过滤检索数据</a><ol><li><a href=#单where语句>单WHERE语句</a></li><li><a href=#组合where语句>组合WHERE语句</a></li></ol></li><li><a href=#用通配符进行过滤>用通配符进行过滤</a></li><li><a href=#用正则表达式进行搜索>用正则表达式进行搜索</a></li><li><a href=#计算字段>计算字段</a></li><li><a href=#分组数据>分组数据</a></li><li><a href=#连接表>连接表</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
