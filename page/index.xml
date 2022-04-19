@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on kwwgoo's Blog</title><link>https://example.com/page/</link><description>Recent content in Pages on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 19 Apr 2022 19:03:56 +0800</lastBuildDate><atom:link href="https://example.com/page/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://example.com/about/</link><pubDate>Tue, 19 Apr 2022 19:03:56 +0800</pubDate><guid>https://example.com/about/</guid><description>&lt;h2 id="关于我">关于我&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on kwwgoo's Blog</title><link>https://kwwgo.github.io/page/</link><description>Recent content in Pages on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 19 Apr 2022 19:03:56 +0800</lastBuildDate><atom:link href="https://kwwgo.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://kwwgo.github.io/about/</link><pubDate>Tue, 19 Apr 2022 19:03:56 +0800</pubDate><guid>https://kwwgo.github.io/about/</guid><description>&lt;h2 id="关于我">关于我&lt;/h2>
 &lt;p>出生在湖北边陲的一个小镇中，相信七分天注定，三分靠打拼。从小体弱多病，性格忧郁，喜欢独处，偶尔也会感到寂寞，不喜麻烦。&lt;/p>
 &lt;h2 id="穷光电之理究工程之极">穷光电之理，究工程之极&lt;/h2>
 &lt;p>对于一切科学技术都感兴趣，希望成为一名有技术的工程师。今将就读于物理系光学方向，如果将来可以在光学方向做出一点小小的贡献，我就心满意足了，穷光电之理，究工程之极。&lt;/p>
 &lt;h2 id="博客">博客&lt;/h2>
-&lt;p>创建这个博客是为了在浩瀚无垠的互联网世界中留下自己一些痕迹。也是为了方便自己复习和巩固学过的一些知识和记录一些难忘的生活经历和感悟。&lt;/p></description></item><item><title>Bber</title><link>https://example.com/bber/</link><pubDate>Tue, 12 Apr 2022 19:04:42 +0800</pubDate><guid>https://example.com/bber/</guid><description>&lt;div id='speak'>&lt;/speak>
+&lt;p>创建这个博客是为了在浩瀚无垠的互联网世界中留下自己一些痕迹。也是为了方便自己复习和巩固学过的一些知识,记录一些难忘的生活经历和感悟。&lt;/p></description></item><item><title>Bber</title><link>https://kwwgo.github.io/bber/</link><pubDate>Tue, 12 Apr 2022 19:04:42 +0800</pubDate><guid>https://kwwgo.github.io/bber/</guid><description>&lt;div id='speak'>&lt;/speak>
 &lt;!-- 使用markdown渲染 -->
 &lt;!-- &lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber-md.min.js" charset="utf-8" >&lt;/script> -->
 &lt;!-- 不使用markdown渲染 -->
@@ -27,7 +27,7 @@ dbName:'talks' // 数据的名称，默认talks，避免有人的命名不是这
 // 哔哔加载完成后的回调函数，你可以写你自己的功能
 console.log('哔哔 加载完成')
 })
-&lt;/script></description></item><item><title>建站日志</title><link>https://example.com/log/</link><pubDate>Tue, 12 Apr 2022 11:36:40 +0800</pubDate><guid>https://example.com/log/</guid><description>&lt;h2 id="2022414">2022/4/14&lt;/h2>
+&lt;/script></description></item><item><title>建站日志</title><link>https://kwwgo.github.io/log/</link><pubDate>Tue, 12 Apr 2022 11:36:40 +0800</pubDate><guid>https://kwwgo.github.io/log/</guid><description>&lt;h2 id="2022414">2022/4/14&lt;/h2>
 &lt;p>正式添加友链，撰写魔改过程。添加自定义shortcodes.&lt;/p>
 &lt;h2 id="2022413">2022/4/13&lt;/h2>
 &lt;p>正式添加站点图标，&lt;a class="link" href="https://realfavicongenerator.net/" target="_blank" rel="noopener"
@@ -38,9 +38,9 @@ console.log('哔哔 加载完成')
 &lt;p>正式搭建个人博客，采用Hugo+Stack+GihubPage,采用GihubAction自动化部署博客
 增加&lt;a class="link" href="https://zl-maker.github.io/p/hugo-suosuo/" target="_blank" rel="noopener"
 >Bber界面&lt;/a>，采用&lt;a class="link" href="https://twikoo.js.org/" target="_blank" rel="noopener"
->twikoo评论&lt;/a>&lt;/p></description></item><item><title>Friends</title><link>https://example.com/friends/</link><pubDate>Sun, 10 Apr 2022 20:52:18 +0800</pubDate><guid>https://example.com/friends/</guid><description>&lt;h2 id="朋友圈">朋友圈&lt;/h2>
+>twikoo评论&lt;/a>&lt;/p></description></item><item><title>Friends</title><link>https://kwwgo.github.io/friends/</link><pubDate>Sun, 10 Apr 2022 20:52:18 +0800</pubDate><guid>https://kwwgo.github.io/friends/</guid><description>&lt;h2 id="朋友圈">朋友圈&lt;/h2>
 &lt;h2 id="主题相关">主题相关&lt;/h2>
-&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
 &lt;a target="_blank" href=https://lewky.cn/ title=雨临Lewis的博客---不想当写手的码农不是好咸鱼_(xз」∠)_ class="friend url">
 &lt;div class="friend block whole default shadow">
 &lt;div class="friend block left">
@@ -53,7 +53,7 @@ console.log('哔哔 加载完成')
 &lt;/div>
 &lt;/a>
 &lt;h2 id="软件工程师">软件工程师&lt;/h2>
-&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
 &lt;a target="_blank" href=https://heaciy.com/ title=Heaciy---Life&amp;#32;is&amp;#32;what&amp;#32;happens&amp;#32;to&amp;#32;you&amp;#32;while&amp;#32;you&amp;#39;re&amp;#32;busy&amp;#32;making&amp;#32;other&amp;#32;plans. class="friend url">
 &lt;div class="friend block whole default shadow">
 &lt;div class="friend block left">
@@ -66,7 +66,7 @@ console.log('哔哔 加载完成')
 &lt;/div>
 &lt;/a>
 &lt;h2 id="前端">前端&lt;/h2>
-&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
 &lt;a target="_blank" href=https://nekodeng.gitee.io title=itsNekoDeng---十万伏特皮卡丘，梦想是世界和平，想要发光发热 class="friend url">
 &lt;div class="friend block whole default shadow">
 &lt;div class="friend block left">
@@ -78,7 +78,7 @@ console.log('哔哔 加载完成')
 &lt;/div>
 &lt;/div>
 &lt;/a>
-&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
 &lt;a target="_blank" href=https://www.antmoe.com/ title=小康博客---一个收藏回忆与分享技术的地方！ class="friend url">
 &lt;div class="friend block whole default shadow">
 &lt;div class="friend block left">
@@ -91,7 +91,7 @@ console.log('哔哔 加载完成')
 &lt;/div>
 &lt;/a>
 &lt;h2 id="大佬">大佬&lt;/h2>
-&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
 &lt;a target="_blank" href=https://io-oi.me/ title=reuixiy---暗夜中,渴望一束光的关怀,在白天,却更渴望黑洞的吞噬,因为好奇心,想看看黑暗中有什么 class="friend url">
 &lt;div class="friend block whole default shadow">
 &lt;div class="friend block left">
@@ -103,7 +103,7 @@ console.log('哔哔 加载完成')
 &lt;/div>
 &lt;/div>
 &lt;/a>
-&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
 &lt;a target="_blank" href=https://guanqr.com/ title=荷戟独彷徨---爱光学，爱生活，爱创造 class="friend url">
 &lt;div class="friend block whole default shadow">
 &lt;div class="friend block left">
@@ -115,7 +115,7 @@ console.log('哔哔 加载完成')
 &lt;/div>
 &lt;/div>
 &lt;/a>
-&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
 &lt;a target="_blank" href=https://www.zyoushuo.cn/ title=阳光派Plus---聪明的妖怪已经录下了唐僧的紧箍咒 class="friend url">
 &lt;div class="friend block whole default shadow">
 &lt;div class="friend block left">
@@ -127,7 +127,7 @@ console.log('哔哔 加载完成')
 &lt;/div>
 &lt;/div>
 &lt;/a>
-&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
 &lt;a target="_blank" href=https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/ title=TRHX&amp;#39;S&amp;#32;BLOG---没有礁石，就没有美丽的浪花；没有挫折，就没有壮丽的人生。 class="friend url">
 &lt;div class="friend block whole default shadow">
 &lt;div class="friend block left">
@@ -139,7 +139,7 @@ console.log('哔哔 加载完成')
 &lt;/div>
 &lt;/div>
 &lt;/a>
-&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
 &lt;a target="_blank" href=https://bbing.com.cn/ title=BBing---自由&amp;#32;分享&amp;#32;合作 class="friend url">
 &lt;div class="friend block whole default shadow">
 &lt;div class="friend block left">
@@ -151,7 +151,7 @@ console.log('哔哔 加载完成')
 &lt;/div>
 &lt;/div>
 &lt;/a>
-&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
 &lt;a target="_blank" href=https://maogeblog.top title=猫猫的小窝---万丈高楼平地起，辉煌只能靠自己 class="friend url">
 &lt;div class="friend block whole default shadow">
 &lt;div class="friend block left">
@@ -162,7 +162,7 @@ console.log('哔哔 加载完成')
 &lt;div class="friend info">"万丈高楼平地起，辉煌只能靠自己"&lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/a></description></item><item><title>Archives</title><link>https://example.com/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://example.com/archives/</guid><description/></item><item><title>Links</title><link>https://example.com/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.com/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
+&lt;/a></description></item><item><title>Archives</title><link>https://kwwgo.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://kwwgo.github.io/archives/</guid><description/></item><item><title>Links</title><link>https://kwwgo.github.io/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kwwgo.github.io/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
 &lt;p>This page&amp;rsquo;s frontmatter:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -188,4 +188,4 @@ console.log('哔哔 加载完成')
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ts-logo-128.jpg&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;code>image&lt;/code> field accepts both local and external images.&lt;/p></description></item><item><title>Search</title><link>https://example.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.com/search/</guid><description/></item></channel></rss>
+&lt;/div>&lt;p>&lt;code>image&lt;/code> field accepts both local and external images.&lt;/p></description></item><item><title>Search</title><link>https://kwwgo.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kwwgo.github.io/search/</guid><description/></item></channel></rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>stack on kwwgoo's Blog</title><link>https://example.com/tags/stack/</link><description>Recent content in stack on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 14 Apr 2022 11:53:22 +0800</lastBuildDate><atom:link href="https://example.com/tags/stack/index.xml" rel="self" type="application/rss+xml"/><item><title>Shotcodes</title><link>https://example.com/p/shotcodes/</link><pubDate>Thu, 14 Apr 2022 11:53:22 +0800</pubDate><guid>https://example.com/p/shotcodes/</guid><description>&lt;img src="https://example.com/p/shotcodes/featured-image.jpg" alt="Featured image of post Shotcodes" />&lt;p>主要参考&lt;a class="link" href="https://guanqr.com/tech/website/hugo-shortcodes-customization/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>stack on kwwgoo's Blog</title><link>https://kwwgo.github.io/tags/stack/</link><description>Recent content in stack on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 14 Apr 2022 11:53:22 +0800</lastBuildDate><atom:link href="https://kwwgo.github.io/tags/stack/index.xml" rel="self" type="application/rss+xml"/><item><title>Shotcodes</title><link>https://kwwgo.github.io/p/shotcodes/</link><pubDate>Thu, 14 Apr 2022 11:53:22 +0800</pubDate><guid>https://kwwgo.github.io/p/shotcodes/</guid><description>&lt;img src="https://kwwgo.github.io/p/shotcodes/featured-image.jpg" alt="Featured image of post Shotcodes" />&lt;p>主要参考&lt;a class="link" href="https://guanqr.com/tech/website/hugo-shortcodes-customization/" target="_blank" rel="noopener"
 >荷戟独彷徨&lt;/a>&lt;/p>
 &lt;h2 id="定义notice">定义&lt;code>notice&lt;/code>&lt;/h2>
 &lt;p>新建&lt;code>layouts\shortcodes\notice.html&lt;/code>文件，添加如下代码&lt;/p>
@@ -252,7 +252,7 @@
 &lt;p>十里青山远，潮平路带沙。数声啼鸟怨年华。又是凄凉时候，在天涯。白露收残月，清风散晓霞。绿杨堤畔问荷花。记得年时沽酒，那人家。&lt;/p>
 &lt;/div>
 &lt;/p>
-&lt;h2 id="未完待续">未完待续&lt;/h2></description></item><item><title>魔改stack主题</title><link>https://example.com/p/%E9%AD%94%E6%94%B9stack%E4%B8%BB%E9%A2%98/</link><pubDate>Tue, 12 Apr 2022 17:34:53 +0800</pubDate><guid>https://example.com/p/%E9%AD%94%E6%94%B9stack%E4%B8%BB%E9%A2%98/</guid><description>&lt;blockquote>
+&lt;h2 id="未完待续">未完待续&lt;/h2></description></item><item><title>魔改stack主题</title><link>https://kwwgo.github.io/p/%E9%AD%94%E6%94%B9stack%E4%B8%BB%E9%A2%98/</link><pubDate>Tue, 12 Apr 2022 17:34:53 +0800</pubDate><guid>https://kwwgo.github.io/p/%E9%AD%94%E6%94%B9stack%E4%B8%BB%E9%A2%98/</guid><description>&lt;blockquote>
 &lt;p>主要参考
 &lt;a class="link" href="https://mantyke.icu/2022/stack-theme-mod/" target="_blank" rel="noopener"
 >小球飞鱼&lt;/a>
@@ -1206,7 +1206,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>效果如下：&lt;/p>
-&lt;link rel="stylesheet" href="https://example.com/scss/friend.css">
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
 &lt;a target="_blank" href=lewky.cn title=雨临Lewis的博客---不想当写手的码农不是好咸鱼_(xз」∠)_ class="friend url">
 &lt;div class="friend block whole default shadow">
 &lt;div class="friend block left">
