@@ -1,14 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kwwgoo's Blog</title><link>https://kwwgo.github.io/</link><description>Recent content on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://kwwgo.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>利用51单片机实现光敏电阻的蓝牙传输</title><link>https://kwwgo.github.io/p/buletooth/</link><pubDate>Wed, 20 Apr 2022 16:10:59 +0800</pubDate><guid>https://kwwgo.github.io/p/buletooth/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kwwgoo's Blog</title><link>https://kwwgo.github.io/</link><description>Recent content on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://kwwgo.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>利用51单片机实现光敏电阻的蓝牙传输</title><link>https://kwwgo.github.io/p/buletooth/</link><pubDate>Wed, 20 Apr 2022 16:10:59 +0800</pubDate><guid>https://kwwgo.github.io/p/buletooth/</guid><description>&lt;img src="https://kwwgo.github.io/p/buletooth/Buletooth.jpg" alt="Featured image of post 利用51单片机实现光敏电阻的蓝牙传输" />&lt;p>
+&lt;div class="notice tip" >
+&lt;div class="notice-title">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512">&lt;path d="M504 256a248 248 0 11-496 0 248 248 0 01496 0zm-248 50a46 46 0 100 92 46 46 0 000-92zm-44-165l8 136c0 6 5 11 12 11h48c7 0 12-5 12-11l8-136c0-7-5-13-12-13h-64c-7 0-12 6-12 13z"/>&lt;/svg>&lt;/div>
 &lt;p>我的毕业设计是蓝牙技术研究及光敏电阻数据的蓝牙获取实现，蓝牙技术是一种无线数据和语音通信开放的全球规范，它通过低成本的近距离无线连接，为固定及移动设备建立通信环境，是一种特殊的近距离无线技术连接。论文要求对蓝牙技术进行深入研究，并编程实现光敏电阻探测数据的蓝牙获取。&lt;/p>
-&lt;/blockquote>
+&lt;/div>
+&lt;div class="notice success" >
+&lt;div class="notice-title">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512">&lt;path d="M504 256a248 248 0 11-496 0 248 248 0 01496 0zM227 387l184-184c7-6 7-16 0-22l-22-23c-7-6-17-6-23 0L216 308l-70-70c-6-6-16-6-23 0l-22 23c-7 6-7 16 0 22l104 104c6 7 16 7 22 0z"/>&lt;/svg>&lt;/div>
+&lt;p>这个毕业设计其实相当于课设的水平，其实完全可以自己买元器件焊接的，加深一些难度的，但是我不想这么麻烦，也就用51单片机做了。&lt;/p>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="蓝牙技术发展">蓝牙技术发展&lt;/h2>
+&lt;h3 id="蓝牙起源">蓝牙起源&lt;/h3>
 &lt;p>蓝牙(Buletooth)起源于1994年，是由蓝牙特别兴趣小组(SIG)主推的一种无线、短距离、低速的个域网协议。 蓝牙具有低成本、移动性、稳定性和功耗小等一系列优点，利用蓝牙技术，能够有效地简化移动通信终端设备之间，以及设备与Internet之间的通信，使数据变得更加迅速高效，为无线通信拓宽道路。它其被广泛应用于计算机、移动通信、信息家电、汽车电子、医疗监护等，有很大的市场占有率。&lt;/p>
+&lt;h3 id="蓝牙1030">蓝牙1.0~3.0&lt;/h3>
 &lt;p>随着对蓝牙技术研究的不断深入，SIG先后发布多个蓝牙版本，各个版本都有新技术加入。在早期蓝牙版本中，蓝牙 1.1 版正式列入 IEEE 802.15.1 标准，该标准定义了物理层（PHY）和媒体访问控（MAC）规范。1.2版本新增加了AFH（Adaptive Frequency Hopping）适应性跳频技术，减少了蓝牙产品与其它无线通讯装置之间所产生的干扰问题。到2.0版本以后蓝牙技术才逐渐成熟，走向实用，新增的 EDR（Enhanced Data Rate）技术通过提高多任务处理和多种蓝牙设备同时运行的能力，使得蓝牙设备的传输率可3Mbps。3.0版本的核心是 AMP（Generic Alternate MAC/PHY），这是一种全新的交替射频技术，允许蓝牙协议栈针对任一任务动态地选择正确射频，并且引入了EPC 增强电源控制技术，再辅以 802.11，实际空闲功耗明显降低。&lt;/p>
+&lt;h3 id="蓝牙40">蓝牙4.0&lt;/h3>
 &lt;p>蓝牙4.0版本以后相比以前在传输速率、传输距离和功耗有了很大的进步。重要的变化就是 BLE（Bluetooth Low Energy）低功耗功能。蓝牙4.0是蓝牙从诞生至今唯一的一个综合协议规范，提出了“低功耗蓝牙”“传统蓝牙”和“高速蓝牙”三种模式。“高速蓝牙”主攻数据交换与传输；“传统蓝牙”则以信息沟通、设备连接为重点；“低功耗蓝牙”以不需占用太多带宽的设备连接为主，功耗较老版本降低了 90%。2013年，Android 4.3系统发布，正式支持蓝牙4.0，为物联网的发展提供核心动力。&lt;/p>
+&lt;h3 id="蓝牙50">蓝牙5.0&lt;/h3>
 &lt;p>2016年，蓝牙5.0正式发布，开启了物联网时代的大门，2017年7月推出的mesh网络能够创建大规模设备网络。Mesh 网状网络是一项独立研发的网络技术，它能够将蓝牙设备作为信号中继站，将数据覆盖到非常大的物理区域，它非常适合于数百或数千台设备需要相互通信的控制、监测和自动化系统。Bluetooth mesh 是为了满足商业和工业使用案例中严格的可靠性、可扩展性和安全性要求而创建的，它已迅速成为网络化照明控制系统的领先标准，使建筑物能够更有效地运行并提高用户体验。方向查找功能于2019年1月推出，使设备能够确定Bluetooth 低能耗（LE）信号的方向。该功能支持信号方向估计的到达角（AoA）和离开角（AoD）方法，允许Bluetooth 近程解决方案增加方向功能，增强用户体验，Bluetooth 定位系统达到厘米级精度，使Bluetooth 技术能够解决从普通、低分辨率系统到最精确的定位用例的全部范围。&lt;/p>
+&lt;h3 id="蓝牙技术">蓝牙技术&lt;/h3>
 &lt;p>蓝牙属于无线个域网，常见的蓝牙网络拓扑包括微微网和散网。微微网设备间共享相同信道，同时最多只能有8个蓝牙设备在同一网络内通信。一个微微网可以作为另一个微微网的一部分存在，这种网络形式称为散网。&lt;/p>
 &lt;p>完整的蓝牙协议栈包括基带协议、逻辑链路控制和适配协议、串口仿真协议、传输控制协议等。按照物理层到应用层的顺序，核心协议形成5层协议栈：无线电（Radio）层，为物理层；基带（Baseband）层，为MAC层；链路管理协议（Link Management，LM）层，为链路层；逻辑链路控制和自适应协议（Logical Link Control and Adaption Protocol，L2CAP）层为传输层；服务发现协议（Service Discovery Protocol，SDP）层为应用层。它们共同构成蓝牙技术应用基础。蓝牙开发分为两种，一是自己选择蓝牙模块，属于嵌入式集成开发，焊接引到集成电路板上，根据蓝牙厂家提供的API进行蓝牙应用编程开发。二是系统已集成蓝牙模块，如Android手机，调用系统提供的API接口进行编程即可。&lt;/p>
 &lt;p>因此，蓝牙作为线缆的代替方案，为移动电话、消费类电子产品、个人计算机、汽车、医疗与健康、运动健身以及智能家居等行业的产品创造了全新的应用方式。蓝牙技术已成为全球开发商、产品制造商和消费者无线接入的标准解决方案。2021年蓝牙设备总出货量预计可以达到46亿。据蓝牙技术联盟预测，到2024年，设备年度出货量将会达到62亿。&lt;/p>
+&lt;h3 id="研究价值">研究价值&lt;/h3>
 &lt;p>利用蓝牙传输光敏电阻数据，可以很方便地把采集到的数据发送到系统已集成蓝牙模块的设备上，如笔记本电脑和手机，并且可以上传到云端，以进行有效的储存和快速的分析。光敏电阻数据的蓝牙获取实现这应用可以拓展到多个场景，如环境或生物监控实验监测、自动控制和测量系统等，可以减少线缆所带来的不便&lt;/p>
 &lt;h2 id="实物设计完善之后再写吧">实物设计(完善之后再写吧)&lt;/h2>
 &lt;p>实物其实很简单，主要有三大块，一个是51单片机模块、模数转换模块、蓝牙模块。&lt;/p></description></item><item><title>About</title><link>https://kwwgo.github.io/about/</link><pubDate>Tue, 19 Apr 2022 19:03:56 +0800</pubDate><guid>https://kwwgo.github.io/about/</guid><description>&lt;h2 id="关于我">关于我&lt;/h2>
