@@ -1268,8 +1268,8 @@
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-v" data-lang="v">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">git&lt;/span> &lt;span class="nv">submodule&lt;/span> &lt;span class="nv">add&lt;/span> &lt;span class="nv">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="c1">//github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>但是这样把主题文件添加为子模块后没有文件，还需要两条命令&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1278,8 +1278,8 @@
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">git submodule init
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git submodule update
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-v" data-lang="v">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">git&lt;/span> &lt;span class="nv">submodule&lt;/span> &lt;span class="nv">init&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">git&lt;/span> &lt;span class="nv">submodule&lt;/span> &lt;span class="nv">update&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>这样主题文件就出现了，当写下第一篇文章，并在本地检查没有错误后就可以部署到GithubPage了。&lt;/p>
@@ -1359,12 +1359,11 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="deploy-key">Deploy Key&lt;/h3>
-&lt;p>&lt;code>settings&lt;/code>-&amp;gt;&lt;code>Developer settings&lt;/code>-&amp;gt;&lt;code>Personal access tokens&lt;/code>-&amp;gt;&lt;code>Generate new token&lt;/code>&lt;/p>
-&lt;p>勾选&lt;code>repo&lt;/code>即可
+&lt;p>&lt;code>settings&lt;/code>-&amp;gt;&lt;code>Developer settings&lt;/code>-&amp;gt;&lt;code>Personal access tokens&lt;/code>-&amp;gt;&lt;code>Generate new token&lt;/code>,勾选&lt;code>repo&lt;/code>即可&lt;br/>
 打开你的博客源码仓库，&lt;code>Settings&lt;/code>-&amp;gt;&lt;code>Secrets&lt;/code>-&amp;gt;&lt;code>New repository secret&lt;/code>，Name 填 &lt;code>HUGO_DEPLOY_TOKEN&lt;/code>,然后将Token粘贴即可。&lt;/p>
 &lt;h2 id="参考">参考&lt;/h2>
 &lt;p>&lt;a class="link" href="https://zenlian.github.io/posts/tools/github-actions-hugo/#fn:4" target="_blank" rel="noopener"
->使用 Github Actions 自动部署 Hugo 博客&lt;/a>
+>使用 Github Actions 自动部署 Hugo 博客&lt;/a>&lt;/br>
 &lt;a class="link" href="https://www.liuvv.com/p/35554ffc.html" target="_blank" rel="noopener"
 >hugo博客自动化部署到github和云服务器上&lt;/a>&lt;/p></description></item><item><title>Hello World,My Blog</title><link>https://kwwgo.github.io/p/hello-worldmy-blog/</link><pubDate>Sun, 10 Apr 2022 21:01:07 +0800</pubDate><guid>https://kwwgo.github.io/p/hello-worldmy-blog/</guid><description>&lt;img src="https://kwwgo.github.io/p/hello-worldmy-blog/hexohugo.webp" alt="Featured image of post Hello World,My Blog" />&lt;p>我想要搭建自己的个人博客主要是受我朋友影响的，当时看到他的博客后，我很羡慕，感觉很有意思，有这么一个地方记录自己的生活或学到的技术是一件非常酷的事情。&lt;/p>
 &lt;p>我第一个博客是用&lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
