@@ -1284,8 +1284,89 @@
 &lt;/div>
 &lt;/div>&lt;p>这样主题文件就出现了，当写下第一篇文章，并在本地检查没有错误后就可以部署到GithubPage了。&lt;/p>
 &lt;h2 id="自动化部署">自动化部署&lt;/h2>
-&lt;p>具体可以参考这篇文章,&lt;a class="link" href="https://yurepo.tw/2021/03/%E5%A6%82%E4%BD%95%E5%B0%87hugo%E9%83%A8%E8%90%BD%E6%A0%BC%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A/" target="_blank" rel="noopener"
->如何將Hugo部落格部署到Github上?&lt;/a>&lt;/p></description></item><item><title>Hello World,My Blog</title><link>https://kwwgo.github.io/p/hello-worldmy-blog/</link><pubDate>Sun, 10 Apr 2022 21:01:07 +0800</pubDate><guid>https://kwwgo.github.io/p/hello-worldmy-blog/</guid><description>&lt;img src="https://kwwgo.github.io/p/hello-worldmy-blog/hexohugo.webp" alt="Featured image of post Hello World,My Blog" />&lt;p>我想要搭建自己的个人博客主要是受我朋友影响的，当时看到他的博客后，我很羡慕，感觉很有意思，有这么一个地方记录自己的生活或学到的技术是一件非常酷的事情。&lt;/p>
+&lt;p>Github Actions 可以帮你自动执行 Hugo 的编译、部署，配置好之后平时只需要维护一份 hugo 博客的源码，push 时自动发布到 Github Pages 上。&lt;/p>
+&lt;h3 id="github-action文件">Github Action文件&lt;/h3>
+&lt;p>你的 Github Pages 仓库需要有两个分支：一个分支 hugo 保存 hugo 博客源码，一个分支 &lt;code>gh-pages&lt;/code> 保存生成的 &lt;code>public&lt;/code> 静态网站。当然你另建一个独立的仓库保存博客源码也是可以的。&lt;/p>
+&lt;p>在 hugo 分支下新建 &lt;code>.github/workflows/main.yml&lt;/code>，参照 actions-hugo 官方文档的描述添加：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">name: Hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">on:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> branches:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - main # 當main分支有push操作時
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jobs:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> deploy:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-18.04
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: actions/checkout@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> submodules: true # 找尋Hugo主題(true OR recursive)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setup Hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: peaceiris/actions-hugo@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> hugo-version: &amp;#39;0.94.2&amp;#39; # hugo 版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> extended: true # 如果是使用extended版本的務必取消註解。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: hugo --minify
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Deploy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: peaceiris/actions-gh-pages@v3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> github_token: ${{ secrets.HUGO_DEPLOY_TOKEN }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> PUBLISH_BRANCH: gh-pages # 推送到 gh-pages 分支
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> PUBLISH_DIR: ./public # hugo 生成的目錄
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> commit_message: ${{ github.event.head_commit.message }}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="deploy-key">Deploy Key&lt;/h3>
+&lt;p>&lt;code>settings&lt;/code>-&amp;gt;&lt;code>Developer settings&lt;/code>-&amp;gt;&lt;code>Personal access tokens&lt;/code>-&amp;gt;&lt;code>Generate new token&lt;/code>&lt;/p>
+&lt;p>勾选&lt;code>repo&lt;/code>即可
+打开你的博客源码仓库，&lt;code>Settings&lt;/code>-&amp;gt;&lt;code>Secrets&lt;/code>-&amp;gt;&lt;code>New repository secret&lt;/code>，Name 填 &lt;code>HUGO_DEPLOY_TOKEN&lt;/code>,然后将Token粘贴即可。&lt;/p>
+&lt;h2 id="参考">参考&lt;/h2>
+&lt;p>&lt;a class="link" href="https://zenlian.github.io/posts/tools/github-actions-hugo/#fn:4" target="_blank" rel="noopener"
+>使用 Github Actions 自动部署 Hugo 博客&lt;/a>
+&lt;a class="link" href="https://www.liuvv.com/p/35554ffc.html" target="_blank" rel="noopener"
+>hugo博客自动化部署到github和云服务器上&lt;/a>&lt;/p></description></item><item><title>Hello World,My Blog</title><link>https://kwwgo.github.io/p/hello-worldmy-blog/</link><pubDate>Sun, 10 Apr 2022 21:01:07 +0800</pubDate><guid>https://kwwgo.github.io/p/hello-worldmy-blog/</guid><description>&lt;img src="https://kwwgo.github.io/p/hello-worldmy-blog/hexohugo.webp" alt="Featured image of post Hello World,My Blog" />&lt;p>我想要搭建自己的个人博客主要是受我朋友影响的，当时看到他的博客后，我很羡慕，感觉很有意思，有这么一个地方记录自己的生活或学到的技术是一件非常酷的事情。&lt;/p>
 &lt;p>我第一个博客是用&lt;a class="link" href="https://gohugo.io/" target="_blank" rel="noopener"
 >Hugo&lt;/a>+&lt;a class="link" href="https://hugoloveit.com/zh-cn/theme-documentation-basics/" target="_blank" rel="noopener"
 >Loveit&lt;/a>主题搭建的。由于我是小白，也并非计算机专业的，就折腾了很久，但是这个主题的作者好像已经不在维护更新了，我就弃用了。&lt;/p>
