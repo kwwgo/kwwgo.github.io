@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on kwwgoo's Blog</title><link>https://kwwgo.github.io/page/</link><description>Recent content in Pages on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 19 Apr 2022 19:03:56 +0800</lastBuildDate><atom:link href="https://kwwgo.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://kwwgo.github.io/about/</link><pubDate>Tue, 19 Apr 2022 19:03:56 +0800</pubDate><guid>https://kwwgo.github.io/about/</guid><description>&lt;p>没想好怎么自我介绍&lt;/p></description></item><item><title>Bber</title><link>https://kwwgo.github.io/bber/</link><pubDate>Tue, 12 Apr 2022 19:04:42 +0800</pubDate><guid>https://kwwgo.github.io/bber/</guid><description>&lt;div id='speak'>&lt;/speak>
+&lt;!-- 使用markdown渲染 -->
+&lt;!-- &lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber-md.min.js" charset="utf-8" >&lt;/script> -->
+&lt;!-- 不使用markdown渲染 -->
+&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8" >&lt;/script>
+&lt;!-- 解析微信表情（参考：https://github.com/buddys/qq-wechat-emotion-parser） -->
+&lt;!-- &lt;script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js">&lt;/script> -->
+&lt;script>
+ispeakBber
+.init({
+el: '#speak', // 容器选择器
+name: 'kwwgoo🦄', // 显示的昵称
+envId: 'twikoo-3gos5ikbf8bca455', // 环境id
+region: 'ap-shanghai', // 腾讯云地址，默认为上海
+limit: 10, // 每次加载的条数，默认为5
+avatar: 'https://cdn.jsdelivr.net/gh/kwwgoo/cdn/custom/img.jpg',
+fromColor:'rgb(245, 150, 170)', // 下方标签背景颜色 默认 rgb(245, 150, 170)
+loadingImg: 'https://7.dusays.com/2021/03/04/d2d5e983e2961.gif', // 自定义loading的图片，示例值为默认值
+dbName:'talks' // 数据的名称，默认talks，避免有人的命名不是这个，所以加入此配置字段。
+})
+.then(function() {
+// 哔哔加载完成后的回调函数，你可以写你自己的功能
+console.log('哔哔 加载完成')
+})
+&lt;/script></description></item><item><title>建站日志</title><link>https://kwwgo.github.io/log/</link><pubDate>Tue, 12 Apr 2022 11:36:40 +0800</pubDate><guid>https://kwwgo.github.io/log/</guid><description>&lt;h2 id="2023420">2023/4/20&lt;/h2>
+&lt;p>全面精简，删除不必要的东西&lt;/p>
+&lt;h2 id="2022414">2022/4/14&lt;/h2>
+&lt;p>正式添加友链，撰写魔改过程。添加自定义shortcodes.&lt;/p>
+&lt;h2 id="2022413">2022/4/13&lt;/h2>
+&lt;p>正式添加站点图标，&lt;a class="link" href="https://realfavicongenerator.net/" target="_blank" rel="noopener"
+>站点图标来源&lt;/a>&lt;/p>
+&lt;p>修改CSS样式，具体参考这篇&lt;a class="link" href="https://blog.echosec.top/p/custom-hugo-theme-styles/" target="_blank" rel="noopener"
+>文章&lt;/a>&lt;/p>
+&lt;h2 id="2022412">2022/4/12&lt;/h2>
+&lt;p>正式搭建个人博客，采用Hugo+Stack+GihubPage,采用GihubAction自动化部署博客
+增加&lt;a class="link" href="https://zl-maker.github.io/p/hugo-suosuo/" target="_blank" rel="noopener"
+>Bber界面&lt;/a>，采用&lt;a class="link" href="https://twikoo.js.org/" target="_blank" rel="noopener"
+>twikoo评论&lt;/a>&lt;/p></description></item><item><title>links</title><link>https://kwwgo.github.io/links/</link><pubDate>Sun, 10 Apr 2022 20:52:18 +0800</pubDate><guid>https://kwwgo.github.io/links/</guid><description>&lt;h2 id="hugo主题相关">Hugo主题相关&lt;/h2>
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
+&lt;a target="_blank" href=https://lewky.cn/ title=雨临Lewis的博客---不想当写手的码农不是好咸鱼_(xз」∠)_ class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/avatar.jpg onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">雨临Lewis的博客&lt;/div>
+&lt;div class="friend info">"不想当写手的码农不是好咸鱼_(xз」∠)_"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
+&lt;a target="_blank" href=https://io-oi.me/ title=reuixiy---暗夜中,渴望一束光的关怀,在白天,却更渴望黑洞的吞噬,因为好奇心,想看看黑暗中有什么 class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://cdn.jsdelivr.net/gh/guanqr/blog/static/icons/android-chrome-512x512.png onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">reuixiy&lt;/div>
+&lt;div class="friend info">"暗夜中,渴望一束光的关怀,在白天,却更渴望黑洞的吞噬,因为好奇心,想看看黑暗中有什么"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
+&lt;a target="_blank" href=https://immmmm.com/ title=木木木木木---无 class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://cdn.jsdelivr.net/gh/guanqr/blog/static/icons/android-chrome-512x512.png onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">木木木木木&lt;/div>
+&lt;div class="friend info">"无"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
+&lt;a target="_blank" href=https://guanqr.com/ title=荷戟独彷徨---爱光学，爱生活，爱创造 class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://cdn.jsdelivr.net/gh/guanqr/blog/static/icons/android-chrome-512x512.png onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">荷戟独彷徨&lt;/div>
+&lt;div class="friend info">"爱光学，爱生活，爱创造"&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;h2 id="软件工程师">软件工程师&lt;/h2>
+&lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
+&lt;a target="_blank" href=https://heaciy.com/ title=Heaciy---Life&amp;#32;is&amp;#32;what&amp;#32;happens&amp;#32;to&amp;#32;you&amp;#32;while&amp;#32;you&amp;#39;re&amp;#32;busy&amp;#32;making&amp;#32;other&amp;#32;plans. class="friend url">
+&lt;div class="friend block whole default shadow">
+&lt;div class="friend block left">
+&lt;img class="friend logo rotate" src=https://heaciy.com/img/avatar_hu5506042264f2f143136192cbc8fadc99_165574_300x0_resize_box_2.png onerror="this.src='https:\/\/sdn.geekzu.org\/avatar\/d41d8cd98f00b204e9800998ecf8427e?d=retro'" />
+&lt;/div>
+&lt;div class="friend block right">
+&lt;div class="friend name">Heaciy&lt;/div>
+&lt;div class="friend info">"Life is what happens to you while you&amp;#39;re busy making other plans."&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a></description></item><item><title>Archives</title><link>https://kwwgo.github.io/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://kwwgo.github.io/archives/</guid><description/></item><item><title>Search</title><link>https://kwwgo.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kwwgo.github.io/search/</guid><description/></item></channel></rss>
