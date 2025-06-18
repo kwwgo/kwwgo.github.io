@@ -1,28 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on kwwgoo's Blog</title><link>https://kwwgo.github.io/page/</link><description>Recent content in Pages on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 19 Apr 2022 19:03:56 +0800</lastBuildDate><atom:link href="https://kwwgo.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://kwwgo.github.io/about/</link><pubDate>Tue, 19 Apr 2022 19:03:56 +0800</pubDate><guid>https://kwwgo.github.io/about/</guid><description>&lt;p>没想好怎么自我介绍&lt;/p></description></item><item><title>Bber</title><link>https://kwwgo.github.io/bber/</link><pubDate>Tue, 12 Apr 2022 19:04:42 +0800</pubDate><guid>https://kwwgo.github.io/bber/</guid><description>&lt;div id='speak'>&lt;/speak>
-&lt;!-- 使用markdown渲染 -->
-&lt;!-- &lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber-md.min.js" charset="utf-8" >&lt;/script> -->
-&lt;!-- 不使用markdown渲染 -->
-&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8" >&lt;/script>
-&lt;!-- 解析微信表情（参考：https://github.com/buddys/qq-wechat-emotion-parser） -->
-&lt;!-- &lt;script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js">&lt;/script> -->
-&lt;script>
-ispeakBber
-.init({
-el: '#speak', // 容器选择器
-name: 'kwwgoo🦄', // 显示的昵称
-envId: 'twikoo-3gos5ikbf8bca455', // 环境id
-region: 'ap-shanghai', // 腾讯云地址，默认为上海
-limit: 10, // 每次加载的条数，默认为5
-avatar: 'https://cdn.jsdelivr.net/gh/kwwgoo/cdn/custom/img.jpg',
-fromColor:'rgb(245, 150, 170)', // 下方标签背景颜色 默认 rgb(245, 150, 170)
-loadingImg: 'https://7.dusays.com/2021/03/04/d2d5e983e2961.gif', // 自定义loading的图片，示例值为默认值
-dbName:'talks' // 数据的名称，默认talks，避免有人的命名不是这个，所以加入此配置字段。
-})
-.then(function() {
-// 哔哔加载完成后的回调函数，你可以写你自己的功能
-console.log('哔哔 加载完成')
-})
-&lt;/script></description></item><item><title>建站日志</title><link>https://kwwgo.github.io/log/</link><pubDate>Tue, 12 Apr 2022 11:36:40 +0800</pubDate><guid>https://kwwgo.github.io/log/</guid><description>&lt;h2 id="2023420">2023/4/20&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on kwwgoo's Blog</title><link>https://kwwgo.github.io/page/</link><description>Recent content in Pages on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 19 Apr 2022 19:03:56 +0800</lastBuildDate><atom:link href="https://kwwgo.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://kwwgo.github.io/about/</link><pubDate>Tue, 19 Apr 2022 19:03:56 +0800</pubDate><guid>https://kwwgo.github.io/about/</guid><description>&lt;p>没想好怎么自我介绍&lt;/p></description></item><item><title>建站日志</title><link>https://kwwgo.github.io/log/</link><pubDate>Tue, 12 Apr 2022 11:36:40 +0800</pubDate><guid>https://kwwgo.github.io/log/</guid><description>&lt;h2 id="2025618">2025/6/18&lt;/h2>
+&lt;p>再次回归&lt;/p>
+&lt;h2 id="2023420">2023/4/20&lt;/h2>
 &lt;p>全面精简，删除不必要的东西&lt;/p>
 &lt;h2 id="2022414">2022/4/14&lt;/h2>
 &lt;p>正式添加友链，撰写魔改过程。添加自定义shortcodes.&lt;/p>
