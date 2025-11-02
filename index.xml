@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kwwgoo's Blog</title><link>https://kwwgo.github.io/</link><description>Recent content on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://kwwgo.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://kwwgo.github.io/about/</link><pubDate>Tue, 19 Apr 2022 19:03:56 +0800</pubDate><guid>https://kwwgo.github.io/about/</guid><description>&lt;p>没想好怎么自我介绍&lt;/p></description></item><item><title>魔改stack主题</title><link>https://kwwgo.github.io/p/revisestack/</link><pubDate>Tue, 12 Apr 2022 17:34:53 +0800</pubDate><guid>https://kwwgo.github.io/p/revisestack/</guid><description>&lt;h2 id="样式修改">样式修改&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kwwgoo's Blog</title><link>https://kwwgo.github.io/</link><description>Recent content on kwwgoo's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://kwwgo.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://kwwgo.github.io/about/</link><pubDate>Tue, 19 Apr 2022 19:03:56 +0800</pubDate><guid>https://kwwgo.github.io/about/</guid><description>&lt;p>光学工程师，目前从事光学装调技术，想成为光学领域的专家（但目前实际上只是测物镜，调机器和拧螺丝罢了，还是小菜鸟，目前计划三年内成为一名入门的光学工程师，加油加油。
+焦虑症患者，积极调整自己恢复中，希望我能慢慢的坚持的下来，每天改变一点点，一定可以康复的！&lt;/p></description></item><item><title>魔改stack主题</title><link>https://kwwgo.github.io/p/revisestack/</link><pubDate>Tue, 12 Apr 2022 17:34:53 +0800</pubDate><guid>https://kwwgo.github.io/p/revisestack/</guid><description>&lt;h2 id="样式修改">样式修改&lt;/h2>
 &lt;p>所有自定样式CSS代码都在&lt;code>\assets\scss\custom.scss&lt;/code>中，修改的地方都已经注释&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -979,7 +980,9 @@
 >zhixuan&amp;rsquo;s Blog&lt;/a>
 &lt;a class="link" href="https://blog.linsnow.cn/" target="_blank" rel="noopener"
 >L1nSn0w&amp;rsquo;s Blog&lt;/a>&lt;/p>
-&lt;/blockquote></description></item><item><title>建站日志</title><link>https://kwwgo.github.io/log/</link><pubDate>Tue, 12 Apr 2022 11:36:40 +0800</pubDate><guid>https://kwwgo.github.io/log/</guid><description>&lt;h2 id="2025618">2025/6/18&lt;/h2>
+&lt;/blockquote></description></item><item><title>建站日志</title><link>https://kwwgo.github.io/log/</link><pubDate>Tue, 12 Apr 2022 11:36:40 +0800</pubDate><guid>https://kwwgo.github.io/log/</guid><description>&lt;h2 id="2025112">2025/11/2&lt;/h2>
+&lt;p>再次删除一些东西&lt;/p>
+&lt;h2 id="2025618">2025/6/18&lt;/h2>
 &lt;p>再次精简&lt;/p>
 &lt;h2 id="2023420">2023/4/20&lt;/h2>
 &lt;p>全面精简，删除不必要的东西&lt;/p>
@@ -994,7 +997,7 @@
 &lt;p>正式搭建个人博客，采用Hugo+Stack+GihubPage,采用GihubAction自动化部署博客
 增加&lt;a class="link" href="https://zl-maker.github.io/p/hugo-suosuo/" target="_blank" rel="noopener"
 >Bber界面&lt;/a>，采用&lt;a class="link" href="https://twikoo.js.org/" target="_blank" rel="noopener"
->twikoo评论&lt;/a>&lt;/p></description></item><item><title>Hello World,My Blog</title><link>https://kwwgo.github.io/p/starthugo/</link><pubDate>Sun, 10 Apr 2022 21:01:07 +0800</pubDate><guid>https://kwwgo.github.io/p/starthugo/</guid><description>&lt;img src="https://kwwgo.github.io/p/starthugo/hexohugo.webp" alt="Featured image of post Hello World,My Blog" />&lt;p>略&lt;/p></description></item><item><title>links</title><link>https://kwwgo.github.io/links/</link><pubDate>Sun, 10 Apr 2022 20:52:18 +0800</pubDate><guid>https://kwwgo.github.io/links/</guid><description>&lt;h2 id="hugo主题相关">Hugo主题相关&lt;/h2>
+>twikoo评论&lt;/a>&lt;/p></description></item><item><title>links</title><link>https://kwwgo.github.io/links/</link><pubDate>Sun, 10 Apr 2022 20:52:18 +0800</pubDate><guid>https://kwwgo.github.io/links/</guid><description>&lt;h2 id="hugo主题相关">Hugo主题相关&lt;/h2>
 &lt;link rel="stylesheet" href="https://kwwgo.github.io/scss/friend.css">
 &lt;a target="_blank" href=https://lewky.cn/ title=雨临Lewis的博客---不想当写手的码农不是好咸鱼_(xз」∠)_ class="friend url">
 &lt;div class="friend block whole default shadow">
