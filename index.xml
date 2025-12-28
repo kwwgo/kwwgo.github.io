@@ -58,11 +58,6 @@ line-height: 1.8;
 一片树林里分出两条路——
 而我选择了人迹更少的一条，
 从此决定了我一生的道路。&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="poem-note"&gt;
-【注释】&lt;br&gt;
-1. 亚历山大·普希金：俄国著名诗人，被称作“俄国文学之父”，诗作饱含积极乐观的人生态度。&lt;br&gt;
-2. 罗伯特·弗罗斯特：美国诗人，善于以自然景象隐喻人生哲理，《未选择的路》是其经典代表作。
 &lt;/div&gt;</description></item><item><title>Markdown Syntax Guide</title><link>https://kwwgo.github.io/p/markdown-syntax-guide/</link><pubDate>Mon, 03 Nov 2025 00:00:00 +0000</pubDate><guid>https://kwwgo.github.io/p/markdown-syntax-guide/</guid><description>&lt;img src="https://kwwgo.github.io/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
 &lt;h2 id="headings"&gt;Headings
 &lt;/h2&gt;&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
