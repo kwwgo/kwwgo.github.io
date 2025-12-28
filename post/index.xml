@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 再圆阙</title><link>https://kwwgo.github.io/post/</link><description>Recent content in Posts on 再圆阙</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>Example Person</copyright><lastBuildDate>Sun, 28 Dec 2025 21:27:36 +0800</lastBuildDate><atom:link href="https://kwwgo.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Poems</title><link>https://kwwgo.github.io/p/poems/</link><pubDate>Sun, 28 Dec 2025 20:43:35 +0800</pubDate><guid>https://kwwgo.github.io/p/poems/</guid><description>&lt;style&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 再圆阙</title><link>https://kwwgo.github.io/post/</link><description>Recent content in Posts on 再圆阙</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>Example Person</copyright><lastBuildDate>Sun, 28 Dec 2025 21:39:58 +0800</lastBuildDate><atom:link href="https://kwwgo.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Poems</title><link>https://kwwgo.github.io/p/poems/</link><pubDate>Sun, 28 Dec 2025 20:43:35 +0800</pubDate><guid>https://kwwgo.github.io/p/poems/</guid><description>&lt;style&gt;
 .poem-center {
 text-align: center;
 margin: 0 auto;
@@ -13,8 +13,9 @@ margin: 20px 0;
 }
 .poem-author {
 text-align: center;
-color: #666;
-margin-bottom: 15px;
+color: #1dc747ff;
+font-size: 20px;
+margin-bottom: 20px;
 }
 .poem-note {
 text-align: center;
@@ -24,40 +25,39 @@ color: #888;
 line-height: 1.8;
 }
 &lt;/style&gt;
-&lt;div class="poem-title"&gt;外国诗两首&lt;/div&gt;
-&lt;div class="poem-author"&gt;▷ 假如生活欺骗了你（普希金）&lt;/div&gt;
+&lt;div class="poem-author"&gt;假如生活欺骗了你（普希金）&lt;/div&gt;
 &lt;div class="poem-center"&gt;
 假如生活欺骗了你，
-不要悲伤，不要心急！
-忧郁的日子里须要镇静：
-相信吧，快乐的日子将会来临！
-&lt;p&gt;心儿永远向往着未来；
-现在却常是忧郁。
-一切都是瞬息，一切都将会过去；
-而那过去了的，就会成为亲切的怀恋。&lt;/p&gt;
+&lt;p&gt;不要悲伤，不要心急！
+忧郁的日子里须要镇静：&lt;/p&gt;
+&lt;p&gt;相信吧，快乐的日子将会来临！&lt;/p&gt;
+&lt;p&gt;心儿永远向往着未来；&lt;/p&gt;
+&lt;p&gt;现在却常是忧郁。&lt;/p&gt;
+&lt;p&gt;一切都是瞬息，一切都将会过去；&lt;/p&gt;
+&lt;p&gt;而那过去了的，就会成为亲切的怀恋。&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="poem-author" style="margin-top:40px;"&gt;▷ 未选择的路（弗罗斯特）&lt;/div&gt;
 &lt;div class="poem-center"&gt;
 黄色的树林里分出两条路，
-可惜我不能同时去涉足，
-我在那路口久久伫立，
-我向着一条路极目望去，
-直到它消失在丛林深处。
-&lt;p&gt;但我却选了另外一条路，
-它荒草萋萋，十分幽寂，
-显得更诱人，更美丽；
-虽然在这条小路上，
-很少留下旅人的足迹。&lt;/p&gt;
-&lt;p&gt;那天清晨落叶满地，
-两条路都未经脚印污染。
-啊，留下一条路等改日再见！
-但我知道路径延绵无尽头，
-恐怕我难以再回返。&lt;/p&gt;
-&lt;p&gt;也许多少年后在某个地方，
-我将轻声叹息将往事回顾：
-一片树林里分出两条路——
-而我选择了人迹更少的一条，
-从此决定了我一生的道路。&lt;/p&gt;
+&lt;p&gt;可惜我不能同时去涉足，&lt;/p&gt;
+&lt;p&gt;我在那路口久久伫立，&lt;/p&gt;
+&lt;p&gt;我向着一条路极目望去，&lt;/p&gt;
+&lt;p&gt;直到它消失在丛林深处。&lt;/p&gt;
+&lt;p&gt;但我却选了另外一条路，&lt;/p&gt;
+&lt;p&gt;它荒草萋萋，十分幽寂，&lt;/p&gt;
+&lt;p&gt;显得更诱人，更美丽；&lt;/p&gt;
+&lt;p&gt;虽然在这条小路上，&lt;/p&gt;
+&lt;p&gt;很少留下旅人的足迹。&lt;/p&gt;
+&lt;p&gt;那天清晨落叶满地，&lt;/p&gt;
+&lt;p&gt;两条路都未经脚印污染。&lt;/p&gt;
+&lt;p&gt;啊，留下一条路等改日再见！&lt;/p&gt;
+&lt;p&gt;但我知道路径延绵无尽头，&lt;/p&gt;
+&lt;p&gt;恐怕我难以再回返。&lt;/p&gt;
+&lt;p&gt;也许多少年后在某个地方，&lt;/p&gt;
+&lt;p&gt;我将轻声叹息将往事回顾：&lt;/p&gt;
+&lt;p&gt;一片树林里分出两条路——&lt;/p&gt;
+&lt;p&gt;而我选择了人迹更少的一条，&lt;/p&gt;
+&lt;p&gt;从此决定了我一生的道路。&lt;/p&gt;
 &lt;/div&gt;</description></item><item><title>Markdown Syntax Guide</title><link>https://kwwgo.github.io/p/markdown-syntax-guide/</link><pubDate>Mon, 03 Nov 2025 00:00:00 +0000</pubDate><guid>https://kwwgo.github.io/p/markdown-syntax-guide/</guid><description>&lt;img src="https://kwwgo.github.io/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
 &lt;h2 id="headings"&gt;Headings
 &lt;/h2&gt;&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
